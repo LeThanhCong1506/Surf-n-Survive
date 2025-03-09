@@ -2,23 +2,21 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody playerRb;
+    private Rigidbody2D playerRb;
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true;
     public bool gameover = false;
     private Animator playerAnim;
-    public ParticleSystem explosionParticle;
-    public ParticleSystem dirtParticle;
-    public AudioClip jumpSound;
-    public AudioClip crashSound;
-    private AudioSource playerAudio;
+    //public AudioClip jumpSound;
+    //public AudioClip crashSound;
+    //private AudioSource playerAudio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        playerAudio = GetComponent<AudioSource>();
-        playerRb = GetComponent<Rigidbody>();
+        //playerAudio = GetComponent<AudioSource>();
+        playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         Physics.gravity *= gravityModifier;
     }
@@ -26,32 +24,34 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameover)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround) //!gameover
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerAnim.SetBool("Jump", true);
+            playerRb.AddForce(Vector2.up * jumpForce);
             isOnGround = false;
-            playerAnim.SetTrigger("Jump_trig");
-            dirtParticle.Stop();
-            playerAudio.PlayOneShot(jumpSound, 3.5f);
+
+            //playerAudio.PlayOneShot(jumpSound, 3.5f);
         }
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Ground") && !gameover)
-    //    {
-    //        isOnGround = true;
-    //        dirtParticle.Play();
-    //    }
-    //    else if (collision.gameObject.CompareTag("Obstacle"))
-    //    {
-    //        gameover = true;
-    //        Debug.Log("Game Over!");
-    //        playerAnim.SetBool("Death_b", true);
-    //        playerAnim.SetInteger("DeathType_int", 1);
-    //        explosionParticle.Play();
-    //        dirtParticle.Stop();
-    //        playerAudio.PlayOneShot(crashSound, 1.0f);
-    //    }
-    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))//!gameover
+        {
+            Debug.Log("On Ground!");
+            isOnGround = true;
+            playerAnim.SetBool("Jump", false);
+            //dirtParticle.Play();
+        }
+        //else if (collision.gameObject.CompareTag("Obstacle"))
+        //{
+        //    gameover = true;
+        //    Debug.Log("Game Over!");
+        //    playerAnim.SetBool("Death_b", true);
+        //    playerAnim.SetInteger("DeathType_int", 1);
+        //    explosionParticle.Play();
+        //    dirtParticle.Stop();
+        //    playerAudio.PlayOneShot(crashSound, 1.0f);
+        //}
+    }
 }
