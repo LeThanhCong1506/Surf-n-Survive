@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public bool gameover = false;
     private Animator playerAnim;
+    private float endHeight;
+    private bool waitTurn = false;
     //public AudioClip jumpSound;
     //public AudioClip crashSound;
     //private AudioSource playerAudio;
@@ -32,7 +35,35 @@ public class PlayerController : MonoBehaviour
 
             //playerAudio.PlayOneShot(jumpSound, 3.5f);
         }
+
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && isOnGround && !waitTurn)
+        {
+            waitTurn = true;
+            playerAnim.SetBool("Bend", true);
+            endHeight = gameObject.GetComponent<BoxCollider2D>().size.y;
+            gameObject.GetComponent<BoxCollider2D>().size =
+                new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x
+               , endHeight * 0.33333f*2);
+            gameObject.GetComponent<BoxCollider2D>().offset =
+               new Vector2(gameObject.GetComponent<BoxCollider2D>().offset.x
+              , -1);
+            StartCoroutine(CheckEndCourutine());
+        }
     }
+
+    IEnumerator CheckEndCourutine()
+    {
+        yield return new WaitForSeconds(1);
+        gameObject.GetComponent<BoxCollider2D>().size =
+                new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x
+               , endHeight);
+        gameObject.GetComponent<BoxCollider2D>().offset =
+               new Vector2(gameObject.GetComponent<BoxCollider2D>().offset.x
+              , 0);
+        playerAnim.SetBool("Bend", false);
+        waitTurn = false;
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

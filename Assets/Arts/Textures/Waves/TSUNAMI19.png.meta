@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 35c82796fd06c244fbe0d983f673b351
+guid: 5123289fb56561f4da3e0055ebe5de52
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6310097738804947200
-    second: ditme_00014_0
+      213: -8541840779196077836
+    second: TSUNAMI19_0
   - first:
-      213: 5478035869840198325
-    second: ditme_00014_1
+      213: -2710309600247897058
+    second: TSUNAMI19_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,23 +116,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ditme_00014_1
+      name: TSUNAMI19_0
       rect:
         serializedVersion: 2
-        x: 394
-        y: 375
-        width: 950
-        height: 562
+        x: 1220
+        y: 10
+        width: 1361
+        height: 992
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5ba4ca88994e50c40800000000000000
-      internalID: 5478035869840198325
+      spriteID: 4f862146119457980800000000000000
+      internalID: -8541840779196077836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TSUNAMI19_1
+      rect:
+        serializedVersion: 2
+        x: 2568
+        y: 657
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14a4e547cb036ad0800000000000000
+      internalID: -2710309600247897058
       vertices: []
       indices: 
       edges: []
@@ -141,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 05174059603668e4fbafb6b6dfc4fb50
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -150,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ditme_00014_1: 5478035869840198325
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
