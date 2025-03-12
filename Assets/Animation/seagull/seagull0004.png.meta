@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 183f223051755e049bbf8d5ddc068d2b
+guid: f0a372c6c9460e04e9935695aa470454
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3260171324595997514
-    second: beach_0
+      213: -5139894522202344833
+    second: seagull0004_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: beach_0
+      name: seagull0004_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 9226
-        height: 404
+        x: 606
+        y: 277
+        width: 701
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6b47a82147b81c2d0800000000000000
-      internalID: -3260171324595997514
+      spriteID: f7237251a2d6ba8b0800000000000000
+      internalID: -5139894522202344833
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      beach_0: -3260171324595997514
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
