@@ -240,11 +240,11 @@ TextureImporter:
         serializedVersion: 2
         x: 1279
         y: 288
-        width: 169
-        height: 238
+        width: 165
+        height: 124
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       customData: 
       outline: []
       physicsShape: []
@@ -270,6 +270,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      trash_0: 176586072
       trash_8: 558606345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
