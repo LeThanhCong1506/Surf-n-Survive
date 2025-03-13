@@ -1,13 +1,31 @@
 fileFormatVersion: 2
-guid: 42b5c91c2a9a2c140be1adc5235225a4
+guid: 5a409869c1b6676448521262d499eb49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6682738439518977790
-    second: Ground_0
+      213: 7858980336673299937
+    second: trash_0
   - first:
-      213: -562605217060080129
-    second: Ground_1
+      213: -4254139554137441018
+    second: trash_1
+  - first:
+      213: -6160856761786740092
+    second: trash_2
+  - first:
+      213: -6345823308526285994
+    second: trash_3
+  - first:
+      213: -1645904623057198210
+    second: trash_4
+  - first:
+      213: 384086640575402203
+    second: trash_5
+  - first:
+      213: 7367594878263299262
+    second: trash_6
+  - first:
+      213: 5228118380326919613
+    second: trash_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,45 +147,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_0
+      name: trash_3
       rect:
         serializedVersion: 2
-        x: 4681
-        y: 712
-        width: 12
-        height: 7
+        x: 1093
+        y: 562
+        width: 85
+        height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efe706e343bddbc50800000000000000
-      internalID: 6682738439518977790
+      spriteID: 65b85ef825b1fe7a0800000000000000
+      internalID: -6345823308526285994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ground_1
+      name: trash_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 146
-        width: 9226
-        height: 258
+        x: 338
+        y: 375
+        width: 144
+        height: 166
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff53a5039893138f0800000000000000
-      internalID: -562605217060080129
+      spriteID: e73a08837729829e0800000000000000
+      internalID: -1645904623057198210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_5
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 93
+        width: 154
+        height: 345
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0587eb3cc845500800000000000000
+      internalID: 384086640575402203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_6
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 65
+        width: 317
+        height: 330
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc0fdfa184fe3660800000000000000
+      internalID: 7367594878263299262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: trash_7
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 288
+        width: 165
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 1}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd931797f10e8840800000000000000
+      internalID: 5228118380326919613
       vertices: []
       indices: 
       edges: []
@@ -176,7 +260,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eade6a8000833e846a87e0c64bc43a84
     internalID: 0
     vertices: []
     indices: 
@@ -186,8 +270,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ground_0: 6682738439518977790
-      Ground_1: -562605217060080129
+      trash_0: 176586072
+      trash_8: 558606345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

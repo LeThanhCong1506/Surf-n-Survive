@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 42b5c91c2a9a2c140be1adc5235225a4
+guid: f805ce03df8382745bb98f9cd103c589
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6682738439518977790
-    second: Ground_0
-  - first:
-      213: -562605217060080129
-    second: Ground_1
+      213: 70706880380955128
+    second: beach 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,35 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ground_0
-      rect:
-        serializedVersion: 2
-        x: 4681
-        y: 712
-        width: 12
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: efe706e343bddbc50800000000000000
-      internalID: 6682738439518977790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Ground_1
+      name: beach 2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 146
+        y: 0
         width: 9226
-        height: 258
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff53a5039893138f0800000000000000
-      internalID: -562605217060080129
+      spriteID: 8f9684878833bf000800000000000000
+      internalID: 70706880380955128
       vertices: []
       indices: 
       edges: []
@@ -185,9 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Ground_0: 6682738439518977790
-      Ground_1: -562605217060080129
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
