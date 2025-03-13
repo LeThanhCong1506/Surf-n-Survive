@@ -24,7 +24,37 @@ public class SpawnManager : MonoBehaviour
     {
         if (!playerControllerScript.gameover)
         {
-            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+            var spawnPos = new Vector3(10, Random.Range(-1, 2), 0);
+            Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
+        }
+        else
+        {
+            var spawnPos = new Vector3(10, Random.Range(-2.5f, -3.5f), 0);
+            Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
+        }
+
+        if (checkSpeed)
+        {
+            IncreaseAllMoveLeftSpeed(3);
+            checkSpeed = false;
+        }
+    }
+
+    private IEnumerator IncreaseSpeedOverTime()
+    {
+        while (!playerControllerScript.gameover)
+        {
+            yield return new WaitForSeconds(40); // Wait for 40 seconds
+            checkSpeed = true;
+        }
+    }
+
+    private void IncreaseAllMoveLeftSpeed(float amount)
+    {
+        var moveLeftScripts = FindObjectsByType<MoveLeft>(FindObjectsSortMode.None);
+        foreach (var moveLeft in moveLeftScripts)
+        {
+            moveLeft.IncreaseSpeed(amount);
         }
     }
 }
