@@ -11,56 +11,58 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim;
     private float endHeight;
     private bool waitTurn = false;
-    //public AudioClip jumpSound;
-    //public AudioClip crashSound;
-    //private AudioSource playerAudio;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //playerAudio = GetComponent<AudioSource>();
         playerRb = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
-        Physics.gravity *= gravityModifier;
+        Physics2D.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround) //!gameover
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isOnGround)
         {
             playerAnim.SetBool("Jump", true);
             playerRb.AddForce(Vector2.up * jumpForce);
             isOnGround = false;
-
-            //playerAudio.PlayOneShot(jumpSound, 3.5f);
         }
 
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && isOnGround && !waitTurn)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && isOnGround && !waitTurn)
         {
-            waitTurn = true;
-            playerAnim.SetBool("Bend", true);
-            endHeight = gameObject.GetComponent<BoxCollider2D>().size.y;
-            gameObject.GetComponent<BoxCollider2D>().size =
-                new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x
-               , endHeight * 0.33333f*2);
-            gameObject.GetComponent<BoxCollider2D>().offset =
-               new Vector2(gameObject.GetComponent<BoxCollider2D>().offset.x
-              , -1);
-            StartCoroutine(CheckEndCourutine());
+            HandleHoldBend();
+        }
+
+        if (Input.GetKeyUp(KeyCode.DownArrow) && isOnGround && waitTurn)
+        {
+            HandleReleaseBend();
         }
     }
 
-    IEnumerator CheckEndCourutine()
+    private void HandleHoldBend()
     {
-        yield return new WaitForSeconds(1);
+        waitTurn = true;
+        playerAnim.SetInteger("Bend", 2);
+        endHeight = gameObject.GetComponent<BoxCollider2D>().size.y;
         gameObject.GetComponent<BoxCollider2D>().size =
-                new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x
-               , endHeight);
+            new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x
+           , endHeight * 0.33333f * 2);
+        gameObject.GetComponent<BoxCollider2D>().offset =
+           new Vector2(gameObject.GetComponent<BoxCollider2D>().offset.x
+          , -1);
+    }
+
+    private void HandleReleaseBend()
+    {
+        playerAnim.SetInteger("Bend", 3);
+        gameObject.GetComponent<BoxCollider2D>().size =
+            new Vector2(gameObject.GetComponent<BoxCollider2D>().size.x
+           , endHeight);
         gameObject.GetComponent<BoxCollider2D>().offset =
                new Vector2(gameObject.GetComponent<BoxCollider2D>().offset.x
               , 0);
-        playerAnim.SetBool("Bend", false);
         waitTurn = false;
     }
 

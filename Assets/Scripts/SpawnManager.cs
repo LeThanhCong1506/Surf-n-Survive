@@ -7,9 +7,8 @@ public class SpawnManager : MonoBehaviour
     public float startDelay = 2;
     public float repeatRate = 2;
     private bool checkSpeed = false;
-
     private PlayerController playerControllerScript;
-
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -17,9 +16,10 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(IncreaseSpeedOverTime());
     }
 
+    // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void SpawnObstacle()
@@ -29,9 +29,9 @@ public class SpawnManager : MonoBehaviour
 
         var obstacleIndex = Random.Range(0, obstaclePrefab.Length);
 
-        if (obstacleIndex == 0 || obstacleIndex == 5)
+        if (obstacleIndex==0||obstacleIndex==1)
         {
-            var spawnPos = new Vector3(10, Random.Range(0, 2), 0);
+            var spawnPos = new Vector3(10, Random.Range(-1.5f, 1.5f), 0);
             Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
         }
         else
@@ -42,7 +42,7 @@ public class SpawnManager : MonoBehaviour
 
         if (checkSpeed)
         {
-            IncreaseAllMoveLeftSpeed(3);
+            IncreaseAllMoveLeftSpeed(0.5f);
             checkSpeed = false;
         }
     }
@@ -51,7 +51,7 @@ public class SpawnManager : MonoBehaviour
     {
         while (!playerControllerScript.gameover)
         {
-            yield return new WaitForSeconds(40); // Wait for 40 seconds
+            yield return new WaitForSeconds(5); // Wait for 40 seconds
             checkSpeed = true;
         }
     }
