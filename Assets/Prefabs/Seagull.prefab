@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3863935650973492217}
   m_Layer: 0
   m_Name: Seagull
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53873e8776f6ae043966c243fb65e66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
 --- !u!95 &3863935650973492217
 Animator:
   serializedVersion: 7
