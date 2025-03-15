@@ -75,7 +75,7 @@ public class SpawnManager : MonoBehaviour
 
         while (!playerControllerScript.gameover)
         {
-            yield return new WaitForSeconds(15); // Wait for 40 seconds
+            yield return new WaitForSeconds(10); // Wait for 40 seconds
             checkSpeed = true;
         }
     }
