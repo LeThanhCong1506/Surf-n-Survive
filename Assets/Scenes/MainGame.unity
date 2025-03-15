@@ -176,6 +176,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6854123117007501897, guid: f93ab8eb90c32394da0edd3c70c1d9e8, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -238,6 +242,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7664238218542683097, guid: 4c0900cebe4b9d043b24c120ffafa68a, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -266,6 +274,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 950423899}
     m_Modifications:
+    - target: {fileID: 1401652581060163148, guid: a3133e0eab97d7a46a70d9e691f2f56b, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6125898808579513223, guid: a3133e0eab97d7a46a70d9e691f2f56b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -696,6 +708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 950423899}
     m_Modifications:
+    - target: {fileID: -2890814003655611444, guid: 96b5bc35e501eb749bf3c1019c8fecc0, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3664833339383099562, guid: 96b5bc35e501eb749bf3c1019c8fecc0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1169,7 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53873e8776f6ae043966c243fb65e66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
 --- !u!212 &766610905
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1335,6 +1351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4117829711225598482, guid: f71093e2e5e62be45aa36d40fb398d98, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1396,6 +1416,10 @@ PrefabInstance:
     - target: {fileID: 2050886286932351584, guid: 77ac20e78cde74c45bb6b6236b0f4639, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5360004988082360757, guid: 77ac20e78cde74c45bb6b6236b0f4639, type: 3}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1521,7 +1545,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 13.29, y: 8.47}
+    oldSize: {x: 9.13, y: 6.44}
     newSize: {x: 12.24, y: 2.22}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1644,6 +1668,7 @@ MonoBehaviour:
   gameover: 0
   speed: 5
   distance: 0
+  distanceToInt: 0
   spawnManager: {fileID: 0}
 --- !u!95 &1417906586
 Animator:
@@ -1737,7 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53873e8776f6ae043966c243fb65e66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
 --- !u!212 &1474712936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1955,6 +1980,10 @@ PrefabInstance:
     - target: {fileID: 773366285896980973, guid: 34c6f2ff667cb40479288b499677e802, type: 3}
       propertyPath: m_Name
       value: Trash 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589094945420679915, guid: 34c6f2ff667cb40479288b499677e802, type: 3}
+      propertyPath: speed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8290007270116269020, guid: 34c6f2ff667cb40479288b499677e802, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2196,7 +2225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53873e8776f6ae043966c243fb65e66f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
 --- !u!212 &1994056190
 SpriteRenderer:
   m_ObjectHideFlags: 0

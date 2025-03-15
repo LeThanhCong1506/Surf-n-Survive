@@ -87,21 +87,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             gameover = true;
             Debug.Log("Game Over!");
-            collision.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
             playerAnim.SetBool("Fall", true);
             playerAnim.SetBool("Jump", false);
             playerAnim.SetInteger("Bend", 3);
+            collision.gameObject.GetComponent<EdgeCollider2D>().enabled = false;//tắt collider khi nhân vật va chạm khi trên không trung hoặc khi đáp xuống obstacle
             StartCoroutine(PLayAnimationDie());
-            //playerAnim.SetBool("Death_b", true);
-            //playerAnim.SetInteger("DeathType_int", 1);
-            //explosionParticle.Play();
-            //dirtParticle.Stop();
-            //playerAudio.PlayOneShot(crashSound, 1.0f);
         }
 
         if (collision.gameObject.CompareTag("Ground"))
@@ -109,7 +103,6 @@ public class PlayerController : MonoBehaviour
             Debug.Log("On Ground!");
             isOnGround = true;
             playerAnim.SetBool("Jump", false);
-            //dirtParticle.Play();
         }
     }
 
@@ -148,8 +141,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PLayAnimationDie()
     {
-        float offsetIncrement = 0.25f;
-        float waitTime = 0.24f;
+        float offsetIncrement = 0.4f;
+        float waitTime = 0.17f;
         BoxCollider2D boxCollider = gameObject.GetComponent<BoxCollider2D>();
 
         for (int i = 1; i <= 9; i++)
