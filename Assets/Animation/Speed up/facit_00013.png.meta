@@ -132,37 +132,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: facit_00013_0
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 726
-        width: 274
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: deff8aa47f2e28300800000000000000
-      internalID: 253014080823558125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: facit_00013_1
       rect:
         serializedVersion: 2
-        x: 442
+        x: 518
         y: 284
-        width: 850
+        width: 774
         height: 556
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,33 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: facit_00013_2
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 520
-        width: 51
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d14c9cb6852ac1d40800000000000000
-      internalID: 5556494540917556253
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 75ec39ab0cbe01e49bcfffda42724ff7
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +167,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      facit_00013_0: 253014080823558125
       facit_00013_1: 5598012773264977723
-      facit_00013_2: 5556494540917556253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

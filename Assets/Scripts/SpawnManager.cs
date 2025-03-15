@@ -4,6 +4,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] obstaclePrefab;
+    public GameObject speedPrefab;
     public float startDelay = 2;
     public float repeatRate = 2;
     private bool checkSpeed = false;
@@ -14,12 +15,13 @@ public class SpawnManager : MonoBehaviour
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
         StartCoroutine(IncreaseSpeedOverTime());
+        StartCoroutine(RamdomSpawnSpeedPrefabs());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void SpawnObstacle()
@@ -29,14 +31,19 @@ public class SpawnManager : MonoBehaviour
 
         var obstacleIndex = Random.Range(0, obstaclePrefab.Length);
 
-        if (obstacleIndex==0||obstacleIndex==1)
+        if (obstacleIndex == 0 || obstacleIndex == 1)
         {
-            var spawnPos = new Vector3(10, Random.Range(-1.5f, 1.5f), 0);
+            var spawnPos = new Vector3(10, Random.Range(-2.0f, 0.5f), 0);
+            Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
+        }
+        else if (obstacleIndex == 3)
+        {
+            var spawnPos = new Vector3(10, Random.Range(-3.0f, -4.0f), 0);
             Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
         }
         else
         {
-            var spawnPos = new Vector3(10, Random.Range(-2.5f, -3.5f), 0);
+            var spawnPos = new Vector3(10, Random.Range(-3.5f, -3.0f), 0);
             Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
         }
 
@@ -47,21 +54,50 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    private IEnumerator IncreaseSpeedOverTime()
+    private IEnumerator RamdomSpawnSpeedPrefabs()
     {
         while (!playerControllerScript.gameover)
         {
-            yield return new WaitForSeconds(5); // Wait for 40 seconds
+            var randomTime = Random.Range(10, 50);
+            yield return new WaitForSeconds(randomTime);
+            Instantiate(speedPrefab, new Vector3(10, -2.7f, 0), speedPrefab.transform.rotation);
+        }
+    }
+
+    private IEnumerator IncreaseSpeedOverTime()
+    {
+
+        while (!playerControllerScript.gameover)
+        {
+            yield return new WaitForSeconds(15); // Wait for 40 seconds
             checkSpeed = true;
         }
     }
 
-    private void IncreaseAllMoveLeftSpeed(float amount)
+    public void IncreaseAllMoveLeftSpeed(float amount)
     {
         var moveLeftScripts = FindObjectsByType<MoveLeft>(FindObjectsSortMode.None);
         foreach (var moveLeft in moveLeftScripts)
         {
             moveLeft.IncreaseSpeed(amount);
+        }
+    }
+
+    public void DeactivateEdgeCollider2D()
+    {
+        var edgeCollider2Ds = GameObject.FindGameObjectsWithTag("Obstacle");
+        foreach (var edgeCollider2D in edgeCollider2Ds)
+        {
+            edgeCollider2D.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
+        }
+    }
+
+    public void ActivateEdgeCollider2D()
+    {
+        var objects = GameObject.FindGameObjectsWithTag("Obstacle");
+        foreach (var obj in objects)
+        {
+            obj.gameObject.GetComponent<EdgeCollider2D>().enabled = true;
         }
     }
 }

@@ -132,37 +132,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: facit_00012_0
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 726
-        width: 274
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f0d5d8630ae0f9a0800000000000000
-      internalID: -6201199386524528396
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: facit_00012_1
       rect:
         serializedVersion: 2
-        x: 442
+        x: 516
         y: 283
-        width: 850
+        width: 776
         height: 557
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,33 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: facit_00012_2
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 520
-        width: 51
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f1c9a0415548f71e0800000000000000
-      internalID: -2197892592190186465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4fa914be83436de4e8d17a94b5ddf054
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +167,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      facit_00012_0: -6201199386524528396
       facit_00012_1: 8588598673661550609
-      facit_00012_2: -2197892592190186465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
