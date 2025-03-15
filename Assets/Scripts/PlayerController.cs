@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 2;
     public float distance = 0;
     public SpawnManager spawnManager;
+    private bool ateSpeed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,8 +31,11 @@ public class PlayerController : MonoBehaviour
         //count kilometers
         if (!gameover)
         {
-            distance += Time.deltaTime;
-            //Debug.Log("Distance: " + distance);
+            if(!ateSpeed)
+                distance += Time.deltaTime;
+            else
+                distance += Time.deltaTime * 3;
+            Debug.Log("Distance: " + distance);
         }
 
 
@@ -111,6 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Speed"))
         {
+            ateSpeed = true;
             StartCoroutine(WaitForStartSpeedPowerUp());
             StartCoroutine(WaitForEndSpeedPowerUp());
         }
@@ -136,7 +141,7 @@ public class PlayerController : MonoBehaviour
         spawnManager.IncreaseAllMoveLeftSpeed(-5);
 
         spawnManager.ActivateEdgeCollider2D();
-        
+        ateSpeed = false;
     }
 
     IEnumerator PLayAnimationDie()
