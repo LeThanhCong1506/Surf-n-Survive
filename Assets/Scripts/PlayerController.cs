@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool waitTurn = false;
     public float speed = 2;
     public float distance = 0;
+    public int distanceToInt = 0;
     public SpawnManager spawnManager;
     private bool ateSpeed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour
                 distance += Time.deltaTime;
             else
                 distance += Time.deltaTime * 3;
+            distanceToInt = Mathf.RoundToInt(distance);
             Debug.Log("Distance: " + distance);
         }
 
@@ -125,18 +127,18 @@ public class PlayerController : MonoBehaviour
         playerAnim.SetBool("Speed", true);
         yield return new WaitForSeconds(0.2f);
         spawnManager.DeactivateEdgeCollider2D();
-        spawnManager.IncreaseAllMoveLeftSpeed(50);
+        spawnManager.IncreaseAllMoveLeftSpeed(20);
     }
 
     IEnumerator WaitForEndSpeedPowerUp()
     {
         yield return new WaitForSeconds(2);
-        spawnManager.IncreaseAllMoveLeftSpeed(-15);
+        spawnManager.IncreaseAllMoveLeftSpeed(-5);
         yield return new WaitForSeconds(2);
-        spawnManager.IncreaseAllMoveLeftSpeed(-15);
+        spawnManager.IncreaseAllMoveLeftSpeed(-5);
         playerAnim.SetBool("Speed", false);
         yield return new WaitForSeconds(2);
-        spawnManager.IncreaseAllMoveLeftSpeed(-15);
+        spawnManager.IncreaseAllMoveLeftSpeed(-5);
         yield return new WaitForSeconds(1);
         spawnManager.IncreaseAllMoveLeftSpeed(-5);
 

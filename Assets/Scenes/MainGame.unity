@@ -637,6 +637,57 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 929268521041625293, guid: 77ac20e78cde74c45bb6b6236b0f4639, type: 3}
   m_PrefabInstance: {fileID: 1267083993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &580826613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580826615}
+  - component: {fileID: 580826614}
+  m_Layer: 5
+  m_Name: DistanceUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &580826614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580826613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 6c30b7a2dda1ba8489af7e53361e8df0, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 452bc04b8cb92c1449ba361e0e6740f6, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!4 &580826615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580826613}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &600883647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1395,6 +1446,7 @@ MonoBehaviour:
   speedPrefab: {fileID: 5861806122779888418, guid: 96b5bc35e501eb749bf3c1019c8fecc0, type: 3}
   startDelay: 2
   repeatRate: 2
+  UIDoc: {fileID: 580826614}
 --- !u!4 &1404772604
 Transform:
   m_ObjectHideFlags: 0
@@ -2210,3 +2262,4 @@ SceneRoots:
   - {fileID: 1417906584}
   - {fileID: 1404772604}
   - {fileID: 950423899}
+  - {fileID: 580826615}

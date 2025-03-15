@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 
 public class SpawnManager : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class SpawnManager : MonoBehaviour
     public float startDelay = 2;
     public float repeatRate = 2;
     private bool checkSpeed = false;
+    public UIDocument UIDoc;
+    private Label m_DistanceLabel;
     private PlayerController playerControllerScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,12 +20,14 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnObstacle", startDelay, repeatRate);
         StartCoroutine(IncreaseSpeedOverTime());
         StartCoroutine(RamdomSpawnSpeedPrefabs());
+        m_DistanceLabel = UIDoc.rootVisualElement.Q<Label>("Distance");
+        m_DistanceLabel.text = playerControllerScript.distanceToInt +" m";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        m_DistanceLabel.text = playerControllerScript.distanceToInt + " m";
     }
 
     void SpawnObstacle()
@@ -33,7 +39,7 @@ public class SpawnManager : MonoBehaviour
 
         if (obstacleIndex == 0 || obstacleIndex == 1)
         {
-            var spawnPos = new Vector3(10, Random.Range(-2.0f, 0.5f), 0);
+            var spawnPos = new Vector3(10, Random.Range(-2.0f, 0.7f), 0);
             Instantiate(obstaclePrefab[obstacleIndex], spawnPos, obstaclePrefab[obstacleIndex].transform.rotation);
         }
         else if (obstacleIndex == 3)
