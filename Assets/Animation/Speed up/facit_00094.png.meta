@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      facit_00094_0: -7112871658724042523
+      facit_00094_1: -6467321205534403715
+      facit_00094_2: 6164658711914247911
+      facit_00094_3: -3572852178841566810
+      facit_00094_4: 9030443459030320186
+      facit_00094_5: 5276325954428980109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

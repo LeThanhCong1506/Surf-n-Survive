@@ -136,11 +136,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 426
-        y: 590
-        width: 525
-        height: 498
+        y: 247
+        width: 1344
+        height: 841
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,55 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: fac 2_00035_1
-      rect:
-        serializedVersion: 2
-        x: 1071
-        y: 249
-        width: 549
-        height: 305
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 304f2cdc620818710800000000000000
-      internalID: 1693775839017235459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fac 2_00035_2
-      rect:
-        serializedVersion: 2
-        x: 1636
-        y: 249
-        width: 137
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: abd16d7275feaf520800000000000000
-      internalID: 2736762881190534586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 27942f6910b235e43941fcc4017a75e3
     internalID: 0
     vertices: []
     indices: 
@@ -214,6 +170,7 @@ TextureImporter:
       fac 2_00035_0: 6928582015611163007
       fac 2_00035_1: 1693775839017235459
       fac 2_00035_2: 2736762881190534586
+      fac 2_00035_3: -257519453
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

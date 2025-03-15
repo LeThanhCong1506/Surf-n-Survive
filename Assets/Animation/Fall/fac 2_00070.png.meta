@@ -129,12 +129,12 @@ TextureImporter:
       name: fac 2_00070_0
       rect:
         serializedVersion: 2
-        x: 441
+        x: 176
         y: 249
-        width: 56
+        width: 1582
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 293e64f3ce2ba1a46bb3aa4b7c7abcc4
     internalID: 0
     vertices: []
     indices: 
