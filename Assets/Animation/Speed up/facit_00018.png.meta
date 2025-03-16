@@ -132,37 +132,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: facit_00018_0
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 607
-        width: 488
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d576936b59ca8af00800000000000000
-      internalID: 1128341465663629149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: facit_00018_1
       rect:
         serializedVersion: 2
-        x: 353
+        x: 517
         y: 288
-        width: 938
+        width: 774
         height: 575
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,33 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: facit_00018_2
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 488
-        width: 287
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1846ccec0753b03d0800000000000000
-      internalID: -3239436748340829055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f34ab7216efa3d441a9b2dc937d2d04c
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +167,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      facit_00018_0: 1128341465663629149
       facit_00018_1: -809318099742379091
-      facit_00018_2: -3239436748340829055
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -137,10 +137,10 @@ TextureImporter:
         serializedVersion: 2
         x: 153
         y: 249
-        width: 571
+        width: 1259
         height: 386
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,55 +153,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: fac 2_00057_1
-      rect:
-        serializedVersion: 2
-        x: 1220
-        y: 249
-        width: 101
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 281f822df5881aed0800000000000000
-      internalID: -2404490780909964926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fac 2_00057_2
-      rect:
-        serializedVersion: 2
-        x: 1305
-        y: 249
-        width: 105
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7420fff9266ea2020800000000000000
-      internalID: 2317918269501014599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 42b403a4c39240d48962c94e1e5acb1a
     internalID: 0
     vertices: []
     indices: 
