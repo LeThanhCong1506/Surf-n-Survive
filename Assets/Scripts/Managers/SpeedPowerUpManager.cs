@@ -5,11 +5,13 @@ public class SpeedPowerUpManager
 {
     private GameManager m_gameManager;
     private GameObject m_speedPrefab;
+    private ObstacleSpawner m_obstacleSpawner;
 
-    public SpeedPowerUpManager(GameManager manager, GameObject prefab)
+    public SpeedPowerUpManager(GameManager manager, GameObject prefab, ObstacleSpawner obstacleSpawner)
     {
         m_gameManager = manager;
         m_speedPrefab = prefab;
+        m_obstacleSpawner = obstacleSpawner;
     }
 
     public void StartSpawning()
@@ -21,9 +23,13 @@ public class SpeedPowerUpManager
     {
         while (!m_gameManager.m_playerControllerScript.Gameover)
         {
-            var randomTime = Random.Range(10, 15);
+            var randomTime = Random.Range(10.0f, 15.0f);
             yield return new WaitForSeconds(randomTime);
-            Object.Instantiate(m_speedPrefab, new Vector3(10, -2.7f, 0), m_speedPrefab.transform.rotation);
+
+            m_obstacleSpawner.IsSpawningSpeedItem = true; // Đặt biến này thành true trước khi spawn speed item
+            Object.Instantiate(m_speedPrefab, new Vector3(15, -2.7f, 0), m_speedPrefab.transform.rotation);
+            yield return new WaitForSeconds(1); // Thời gian chờ để đảm bảo speed item được spawn trước
+            m_obstacleSpawner.IsSpawningSpeedItem = false; // Đặt lại biến này thành false sau khi spawn xong
         }
     }
 }

@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     {
         m_playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
         m_obstacleSpawner = new ObstacleSpawner(this, ObstaclePrefab, StartDelay, RepeatRate);
-        m_speedPowerUpManager = new SpeedPowerUpManager(this, SpeedPrefab);
+        m_speedPowerUpManager = new SpeedPowerUpManager(this, SpeedPrefab, m_obstacleSpawner);
         m_uiManager = new UIManager(UIDoc);
 
         m_obstacleSpawner.StartSpawning();
