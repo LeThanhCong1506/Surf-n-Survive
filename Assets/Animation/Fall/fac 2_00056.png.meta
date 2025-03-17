@@ -52,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -136,11 +136,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 157
-        y: 247
-        width: 1259
-        height: 407
+        y: 249
+        width: 571
+        height: 405
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,11 +153,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: fac 2_00056_1
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 249
+        width: 114
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6745a0205f7591e40800000000000000
+      internalID: 5627625919188980854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fac 2_00056_2
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 249
+        width: 111
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19800462605b9d70800000000000000
+      internalID: 9050916259645917468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c5870e0c5dc13d84ebd9cb08c1693218
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -170,7 +214,6 @@ TextureImporter:
       fac 2_00056_0: 1774349602959176334
       fac 2_00056_1: 5627625919188980854
       fac 2_00056_2: 9050916259645917468
-      fac 2_00056_3: -1377304478
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

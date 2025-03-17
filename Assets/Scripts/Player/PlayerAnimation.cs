@@ -16,18 +16,17 @@ public class PlayerAnimation
 
     public IEnumerator PLayAnimationDie()
     {
-        float offsetIncrement = 0.4f;
-        float waitTime = 0.17f;
+        float offsetIncrement = -0.12f;
+        float waitTime = 0.0575f;
         BoxCollider2D boxCollider = m_playerController.gameObject.GetComponent<BoxCollider2D>();
 
-        for (int i = 1; i <= 9; i++)
+        for (int i = 1; i <= 35; i++)
         {
             boxCollider.offset = new Vector2(boxCollider.offset.x, i * offsetIncrement);
             yield return new WaitForSeconds(waitTime);
         }
 
-        boxCollider.offset = new Vector2(boxCollider.offset.x, 3f);
-        yield return new WaitForSeconds(0.05f);
+        m_playerAnim.SetBool("Fall", false);
         m_playerController.gameObject.SetActive(false);
     }
 
@@ -36,22 +35,21 @@ public class PlayerAnimation
         m_playerAnim.SetBool("Speed", true);
         yield return new WaitForSeconds(0.2f);
         m_gameManager.DeactivateEdgeCollider2D();
-        m_gameManager.IncreaseAllMoveLeftSpeed(20, 0);
+        m_gameManager.IncreaseAllMoveLeftSpeed(10, 0);
         m_playerController.StartCoroutine(WaitForEndSpeedPowerUp());
     }
 
     private IEnumerator WaitForEndSpeedPowerUp()
     {
-        yield return new WaitForSeconds(6);
-        m_gameManager.IncreaseAllMoveLeftSpeed(-5, 0);
+        yield return new WaitForSeconds(4);
+        m_gameManager.IncreaseAllMoveLeftSpeed(-4, 0);
         yield return new WaitForSeconds(2);
-        m_gameManager.IncreaseAllMoveLeftSpeed(-5, 0);
+        m_gameManager.IncreaseAllMoveLeftSpeed(-3, 0);
         m_playerAnim.SetBool("Speed", false);
-        yield return new WaitForSeconds(2);
-        m_gameManager.IncreaseAllMoveLeftSpeed(-5, 0);
         yield return new WaitForSeconds(1);
-        m_gameManager.IncreaseAllMoveLeftSpeed(-5, 0);
-
+        m_gameManager.IncreaseAllMoveLeftSpeed(-2, 0);
+        yield return new WaitForSeconds(1);
+        m_gameManager.IncreaseAllMoveLeftSpeed(-1, 0);
         m_gameManager.ActivateEdgeCollider2D();
         m_playerController.AteSpeed = false;
     }

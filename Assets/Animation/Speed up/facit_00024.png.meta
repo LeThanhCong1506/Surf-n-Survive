@@ -61,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -141,6 +141,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: facit_00024_0
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 803
+        width: 287
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20701a21215da8430800000000000000
+      internalID: 3786072710356993794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: facit_00024_1
       rect:
         serializedVersion: 2
@@ -149,7 +171,7 @@ TextureImporter:
         width: 769
         height: 546
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -162,11 +184,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: facit_00024_2
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 722
+        width: 412
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60ff907825734ea90800000000000000
+      internalID: -7285637469586194682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: facit_00024_3
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 630
+        width: 209
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3a8defe9b2f7120800000000000000
+      internalID: 2413695887174312874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: facit_00024_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 505
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41eba9d943f8d800800000000000000
+      internalID: 637526845783007565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: facit_00024_5
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 431
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c1c8ecd8dbcbd40800000000000000
+      internalID: 5601560453295381636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: da774462fbd4c0b41b9ea41d14d88760
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -176,7 +286,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      facit_00024_0: 3786072710356993794
       facit_00024_1: -4397587817443709923
+      facit_00024_2: -7285637469586194682
+      facit_00024_3: 2413695887174312874
+      facit_00024_4: 637526845783007565
+      facit_00024_5: 5601560453295381636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

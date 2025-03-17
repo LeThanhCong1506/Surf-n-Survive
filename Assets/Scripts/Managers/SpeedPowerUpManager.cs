@@ -21,7 +21,7 @@ public class SpeedPowerUpManager
     {
         while (!m_gameManager.m_playerControllerScript.Gameover)
         {
-            var randomTime = Random.Range(10, 50);
+            var randomTime = Random.Range(10, 15);
             yield return new WaitForSeconds(randomTime);
             Object.Instantiate(m_speedPrefab, new Vector3(10, -2.7f, 0), m_speedPrefab.transform.rotation);
         }

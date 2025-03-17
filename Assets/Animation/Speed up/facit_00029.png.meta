@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -132,12 +132,12 @@ TextureImporter:
       name: facit_00029_0
       rect:
         serializedVersion: 2
-        x: 518
+        x: 257
         y: 291
-        width: 770
+        width: 1031
         height: 547
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,11 +150,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: facit_00029_1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 790
+        width: 545
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767c44511199d44f0800000000000000
+      internalID: -842849256598091929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5bcc11ecf5458442903a4f6792a3c49
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -165,6 +187,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       facit_00029_0: 4952507310592117451
+      facit_00029_1: -842849256598091929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

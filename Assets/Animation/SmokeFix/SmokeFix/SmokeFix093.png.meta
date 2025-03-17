@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 10a7795e57aeefd418d93344553907c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7193177127656336221
+    second: SmokeFix093_0
+  - first:
+      213: -2034833162512038978
+    second: SmokeFix093_1
+  - first:
+      213: -7835715811617122297
+    second: SmokeFix093_2
+  - first:
+      213: 1710209571148949200
+    second: SmokeFix093_3
+  - first:
+      213: -801435036449767483
+    second: SmokeFix093_4
+  - first:
+      213: -4281369977800929927
+    second: SmokeFix093_5
+  - first:
+      213: 1103425940801472547
+    second: SmokeFix093_6
+  - first:
+      213: -4667507273464600964
+    second: SmokeFix093_7
+  - first:
+      213: -7938018911114441786
+    second: SmokeFix093_8
+  - first:
+      213: 9135284499886256107
+    second: SmokeFix093_9
+  - first:
+      213: -8197133614929262399
+    second: SmokeFix093_10
+  - first:
+      213: 8527883287535579012
+    second: SmokeFix093_11
+  - first:
+      213: 2923449069900789556
+    second: SmokeFix093_12
+  - first:
+      213: -8465974535398754718
+    second: SmokeFix093_13
+  - first:
+      213: -5693056536656573611
+    second: SmokeFix093_14
+  - first:
+      213: 8074379767202175866
+    second: SmokeFix093_15
+  - first:
+      213: 7663460037778045944
+    second: SmokeFix093_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmokeFix093_0
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 745
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bab6c8c7c43d360800000000000000
+      internalID: 7193177127656336221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_1
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 764
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb3094b0502d2c3e0800000000000000
+      internalID: -2034833162512038978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_2
+      rect:
+        serializedVersion: 2
+        x: 6319
+        y: 754
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70856a71cf1f14390800000000000000
+      internalID: -7835715811617122297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_3
+      rect:
+        serializedVersion: 2
+        x: 6367
+        y: 769
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d66ecb3b82ebb710800000000000000
+      internalID: 1710209571148949200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_4
+      rect:
+        serializedVersion: 2
+        x: 6381
+        y: 771
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cffbdd941bb0e4f0800000000000000
+      internalID: -801435036449767483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_5
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 602
+        width: 290
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d472950b48594c0800000000000000
+      internalID: -4281369977800929927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_6
+      rect:
+        serializedVersion: 2
+        x: 6146
+        y: 624
+        width: 161
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3284c650c08205f00800000000000000
+      internalID: 1103425940801472547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_7
+      rect:
+        serializedVersion: 2
+        x: 6305
+        y: 627
+        width: 105
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7627924ddea93fb0800000000000000
+      internalID: -4667507273464600964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_8
+      rect:
+        serializedVersion: 2
+        x: 6399
+        y: 706
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbc0b69bdd76d190800000000000000
+      internalID: -7938018911114441786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_9
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 515
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bef2ad11adc07ce70800000000000000
+      internalID: 9135284499886256107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_10
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 547
+        width: 106
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c84ab1586eed3e80800000000000000
+      internalID: -8197133614929262399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_11
+      rect:
+        serializedVersion: 2
+        x: 5968
+        y: 524
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f6c87daa0295670800000000000000
+      internalID: 8527883287535579012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_12
+      rect:
+        serializedVersion: 2
+        x: 6006
+        y: 527
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437f162a07d229820800000000000000
+      internalID: 2923449069900789556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_13
+      rect:
+        serializedVersion: 2
+        x: 6036
+        y: 552
+        width: 107
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266fd04c301d28a80800000000000000
+      internalID: -8465974535398754718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_14
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 519
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b8e563e333ef0b0800000000000000
+      internalID: -5693056536656573611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_15
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 486
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7bdfad4e95fd0070800000000000000
+      internalID: 8074379767202175866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmokeFix093_16
+      rect:
+        serializedVersion: 2
+        x: 5981
+        y: 485
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb79263d441a5a60800000000000000
+      internalID: 7663460037778045944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SmokeFix093_0: 7193177127656336221
+      SmokeFix093_1: -2034833162512038978
+      SmokeFix093_10: -8197133614929262399
+      SmokeFix093_11: 8527883287535579012
+      SmokeFix093_12: 2923449069900789556
+      SmokeFix093_13: -8465974535398754718
+      SmokeFix093_14: -5693056536656573611
+      SmokeFix093_15: 8074379767202175866
+      SmokeFix093_16: 7663460037778045944
+      SmokeFix093_2: -7835715811617122297
+      SmokeFix093_3: 1710209571148949200
+      SmokeFix093_4: -801435036449767483
+      SmokeFix093_5: -4281369977800929927
+      SmokeFix093_6: 1103425940801472547
+      SmokeFix093_7: -4667507273464600964
+      SmokeFix093_8: -7938018911114441786
+      SmokeFix093_9: 9135284499886256107
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
