@@ -15,10 +15,12 @@ public class MoveLeft : MonoBehaviour
         if (m_playerControllerScript == null)
             return;
 
-        if (!m_playerControllerScript.Gameover)
-        {
-            transform.Translate(Vector3.left * Time.fixedDeltaTime * Speed);
-        }
+        if (m_playerControllerScript.Gameover)
+            return;
+
+        // sử dụng tọa độ của thế giới để di chuyển vật thể sang trái,
+        //không phụ thuộc vào hướng của vật thể.
+        transform.Translate(Vector3.left * Time.fixedDeltaTime * Speed, Space.World);
     }
 
     public void IncreaseSpeed(float amount)
