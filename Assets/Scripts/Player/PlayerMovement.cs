@@ -38,7 +38,7 @@ public class PlayerMovement
         playerController.GetComponent<BoxCollider2D>().size =
             new Vector2(playerController.GetComponent<BoxCollider2D>().size.x, endHeight * 0.33333f * 2);
         playerController.GetComponent<BoxCollider2D>().offset =
-            new Vector2(playerController.GetComponent<BoxCollider2D>().offset.x, -1);
+            new Vector2(playerController.GetComponent<BoxCollider2D>().offset.x, -0.6f);
     }
 
     public void HandleReleaseBend()
