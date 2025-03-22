@@ -66,6 +66,9 @@ public class BlurSpriteRenderer : MonoBehaviour
                     spriteRenderer.sortingOrder = -2;
                     spriteRenderer.material = blurMaterial[3];
                     break;
+                case "Beach Opacity":
+                    StartCoroutine(ApplyBlurWithDelay(obj, 0.5f, blurMaterial[0], 9));
+                    break;
                 case "Beach Inside":
                     spriteRenderer.sortingOrder = -1;
                     spriteRenderer.material = blurMaterial[3];
