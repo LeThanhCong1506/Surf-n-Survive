@@ -27,7 +27,6 @@ public class PlayerCollision : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            Debug.Log("On Ground!");
             m_playerController.IsOnGround = true;
             m_animation.SetBool("Jump", false);
         }

@@ -23,11 +23,11 @@ public class SpeedPowerUpManager
     {
         while (!m_gameManager.m_playerControllerScript.Gameover)
         {
-            var randomTime = Random.Range(10.0f, 15.0f);
+            var randomTime = Random.Range(20.0f, 60.0f);
             yield return new WaitForSeconds(randomTime);
 
             m_obstacleSpawner.IsSpawningSpeedItem = true; // Đặt biến này thành true trước khi spawn speed item
-            Object.Instantiate(m_speedPrefab, new Vector3(15, -2.7f, 0), m_speedPrefab.transform.rotation);
+            Object.Instantiate(m_speedPrefab, new Vector3(15,Random.Range(-2.7f, 0.7f), 0), m_speedPrefab.transform.rotation);
             yield return new WaitForSeconds(1); // Thời gian chờ để đảm bảo speed item được spawn trước
             m_obstacleSpawner.IsSpawningSpeedItem = false; // Đặt lại biến này thành false sau khi spawn xong
         }

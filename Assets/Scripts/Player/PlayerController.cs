@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
     public float Speed = 2;
     private int m_distanceToInt = 0;
     public float SpeedPowerUpDuration = 2;
-    public bool IsOnGround { get; set; } = true;
-    public bool Gameover { get; set; } = false;
-    public float Distance { get; set; }
-    public int DistanceToInt { get; set; }
-    public bool AteSpeed { get; set; } = false;
-    public bool WaitTurn { get; set; } = false;
+
+    [HideInInspector] public bool IsOnGround;
+    [HideInInspector] public bool Gameover;
+    [HideInInspector] public float Distance;
+    [HideInInspector] public int DistanceToInt;
+    [HideInInspector] public bool AteSpeed;
+    [HideInInspector] public bool WaitTurn;
 
     private PlayerMovement m_playerMovement;
     private PlayerCollision m_playerCollision;
@@ -25,9 +26,16 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        IsOnGround = true;
+        Gameover = false;
+        AteSpeed = false;
+        WaitTurn = false;
+
         m_playerRb = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
         m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+
+        Physics2D.gravity = new Vector2(0, -9.81f);
         Physics2D.gravity *= GravityModifier;
 
         m_playerAnimation = new PlayerAnimation(this, m_animator, m_gameManager);

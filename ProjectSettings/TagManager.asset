@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Speed
   - New tag
+  - Stand
   layers:
   - Default
   - TransparentFX
