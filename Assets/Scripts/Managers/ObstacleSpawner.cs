@@ -48,7 +48,7 @@ public class ObstacleSpawner
             }
             else
             {
-                spawnPos = new Vector3(10, Random.Range(-3.5f, -3.0f), 0);
+                spawnPos = new Vector3(10, Random.Range(-3.4f, -3.0f), 0);
             }
 
             Object.Instantiate(m_obstaclePrefab[obstacleIndex], spawnPos, m_obstaclePrefab[obstacleIndex].transform.rotation);
