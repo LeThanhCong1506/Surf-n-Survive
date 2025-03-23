@@ -71,7 +71,6 @@ public class BlurSpriteRenderer : MonoBehaviour
                     spriteRenderer.material = blurMaterial[3];
                     break;
                 case "Beach Opacity":
-                    spriteRenderer.sortingOrder = 9;
                     spriteRenderer.material = blurMaterial[5];
                     break;
                 case "Beach Inside":
