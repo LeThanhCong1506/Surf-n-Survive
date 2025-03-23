@@ -1,3 +1,0 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:Label text="Label" name="Distance" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=2fd50cc2c336ec84da15187c400c6aaf&amp;type=3#NotInter-Regular&quot;); -unity-font-style: bold; font-size: 70px; -unity-text-align: upper-right; -unity-text-outline-color: rgba(58, 121, 187, 0); color: rgb(255, 219, 0); margin-top: 2px; top: 150px; right: 40px;" />
-</engine:UXML>

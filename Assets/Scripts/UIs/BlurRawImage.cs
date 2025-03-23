@@ -5,19 +5,19 @@ public class BlurRawImages : MonoBehaviour
 {
     public GameObject[] images;      // Gán trong Inspector cho danh sách RawImage cần áp dụng hiệu ứng blur
     public Material[] blurMaterial;     // Material Blur được gán trong Inspector
-    private Material[] originalMaterials; // Lưu lại material gốc của từng RawImage
+    private Material[] m_originalMaterials; // Lưu lại material gốc của từng RawImage
 
     void Start()
     {
         if (images != null && images.Length > 0)
         {
-            originalMaterials = new Material[images.Length];
+            m_originalMaterials = new Material[images.Length];
             for (int i = 0; i < images.Length; i++)
             {
                 if (images[i] != null)
                 {
                     // Lưu lại material gốc của từng RawImage
-                    originalMaterials[i] = images[i].GetComponent<Image>().material;
+                    m_originalMaterials[i] = images[i].GetComponent<Image>().material;
                 }
             }
         }
@@ -49,14 +49,14 @@ public class BlurRawImages : MonoBehaviour
 
     public void RemoveBlur()
     {
-        if (images != null && originalMaterials != null)
+        if (images != null && m_originalMaterials != null)
         {
             for (int i = 0; i < images.Length; i++)
             {
                 if (images[i] != null)
                 {
                     // Khôi phục lại material gốc của từng RawImage
-                    images[i].GetComponent<Image>().material = originalMaterials[i];
+                    images[i].GetComponent<Image>().material = m_originalMaterials[i];
                 }
             }
         }
