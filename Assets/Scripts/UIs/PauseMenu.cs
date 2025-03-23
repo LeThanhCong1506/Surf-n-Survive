@@ -23,6 +23,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
+        AudioManager.Instance.PlayBackgroundMenu();
     }
 
     public void Resume()
@@ -36,7 +37,6 @@ public class PauseMenu : MonoBehaviour
         // Đặt lại Time.timeScale về 1
         Time.timeScale = 1;
 
-        // Tải lại cảnh hiện tại
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

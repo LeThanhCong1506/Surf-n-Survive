@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_bestDistanceLabel;
     [SerializeField] private TextMeshProUGUI m_distanceLabel;
     [HideInInspector] public PlayerController m_playerControllerScript;
-    [HideInInspector] public BlurSpriteRenderer m_gameoverMenu;
+    [HideInInspector] public BlurSpriteRenderer m_blurManager;
 
     private ObstacleSpawner m_obstacleSpawner;
     private SpeedPowerUpManager m_speedPowerUpManager;
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         m_appliedBlur = false;
 
         m_playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
-        m_gameoverMenu = GameObject.Find("PauseManager").GetComponent<BlurSpriteRenderer>();
+        m_blurManager = GameObject.Find("BlurManager").GetComponent<BlurSpriteRenderer>();
         m_obstacleSpawner = new ObstacleSpawner(this, ObstaclePrefab, StartDelay, RepeatRate);
         m_speedPowerUpManager = new SpeedPowerUpManager(this, SpeedPrefab, m_obstacleSpawner);
         m_uiManager = new UIManager(m_distanceLabel, m_currentDistanceLabel, m_bestDistanceLabel);
@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         m_obstacleSpawner.StartSpawning();
         m_speedPowerUpManager.StartSpawning();
         m_uiManager.UpdateDistanceLabel(m_playerControllerScript.DistanceToInt);
+        AudioManager.Instance.PlayBackgroundMusicGame();
     }
 
     void Update()
@@ -59,7 +60,7 @@ public class GameManager : MonoBehaviour
         {
             if (m_appliedBlur)
             {
-                m_gameoverMenu.RemoveBlur();
+                m_blurManager.RemoveBlur();
                 m_appliedBlur = false;
             }
         }
@@ -70,10 +71,11 @@ public class GameManager : MonoBehaviour
         m_uiManager.UpdateDistanceWhenPauseAndGameOver();
         yield return new WaitForSeconds(2.6f);
         Time.timeScale = 0;
-        m_gameoverMenu.ApplyBlur();
+        m_blurManager.ApplyBlur();
         m_appliedBlur = true;
         m_uiManager.UpdateCurrentDistanceLabel($"{m_playerControllerScript.DistanceToInt} m");
-        m_uiManager.UpdateBestDistanceLabel("1250 m");
+        SaveManager.Instance.SaveHighScore(m_playerControllerScript.DistanceToInt);
+        m_uiManager.UpdateBestDistanceLabel($"{SaveManager.Instance.GetHighScore()} m");
         m_gameOver.SetActive(true);
         m_darkOverlay.SetActive(true);
         m_pauseButton.SetActive(false);
@@ -105,6 +107,28 @@ public class GameManager : MonoBehaviour
         foreach (var edgeCollider2D in edgeCollider2Ds)
         {
             edgeCollider2D.gameObject.GetComponent<EdgeCollider2D>().enabled = true;
+        }
+    }
+
+    public void SaveHighScore()
+    {
+        if (m_playerControllerScript != null)
+        {
+            int currentScore = m_playerControllerScript.DistanceToInt;
+            if (SaveManager.Instance != null)
+            {
+                SaveManager.Instance.SaveHighScore(currentScore);
+            }
+            else
+            {
+                // Fallback nếu SaveManager chưa được khởi tạo
+                int highScore = PlayerPrefs.GetInt("HighScore", 0);
+                if (currentScore > highScore)
+                {
+                    PlayerPrefs.SetInt("HighScore", currentScore);
+                    PlayerPrefs.Save();
+                }
+            }
         }
     }
 }

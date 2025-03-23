@@ -9,6 +9,7 @@ TagManager:
   - Speed
   - New tag
   - Stand
+  - Audio
   layers:
   - Default
   - TransparentFX
