@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
@@ -29,7 +30,13 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             m_playerController.IsOnGround = true;
-            m_animation.SetBool("Jump", false);
+            m_playerController.StartCoroutine(WaitForGround());
         }
+    }
+
+    IEnumerator WaitForGround()
+    {
+        yield return new WaitForSeconds(0.01f);
+        m_animation.SetBool("Jump", false);
     }
 }

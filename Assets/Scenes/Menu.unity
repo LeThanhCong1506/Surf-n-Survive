@@ -804,8 +804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcadbb1e0cd8f5d4a827879f0b66ccf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSprite: {fileID: -2067357498952018473, guid: 087bb06c5d6ff7b4c8b546b84d226492, type: 3}
-  pressedSprite: {fileID: 6994659428038443490, guid: 2ce9dc4e64d3c4d47b493524a7b0a6d9, type: 3}
+  m_normalSprite: {fileID: -2067357498952018473, guid: 087bb06c5d6ff7b4c8b546b84d226492, type: 3}
+  m_pressedSprite: {fileID: 6994659428038443490, guid: 2ce9dc4e64d3c4d47b493524a7b0a6d9, type: 3}
 --- !u!1 &844229707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,8 +1612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcadbb1e0cd8f5d4a827879f0b66ccf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSprite: {fileID: -7450864606208009099, guid: 37b1008f530e978479723ca0b32e2ef4, type: 3}
-  pressedSprite: {fileID: 1554534846071995126, guid: 506261e379a34584897b16b9b778d208, type: 3}
+  m_normalSprite: {fileID: -7450864606208009099, guid: 37b1008f530e978479723ca0b32e2ef4, type: 3}
+  m_pressedSprite: {fileID: 1554534846071995126, guid: 506261e379a34584897b16b9b778d208, type: 3}
 --- !u!1 &1618104630
 GameObject:
   m_ObjectHideFlags: 0
