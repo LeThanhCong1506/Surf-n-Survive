@@ -8,6 +8,9 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private Slider m_musicSlider;
     [SerializeField] private Slider m_vfxSlider;
 
+    private float m_previousMusicVolume;
+    private float m_previousVFXVolume;
+
     private void Start()
     {
         // Kiểm tra xem SaveManager có tồn tại không
@@ -90,13 +93,77 @@ public class VolumeSettings : MonoBehaviour
 
     public void MuteMusic()
     {
+        m_previousMusicVolume = m_musicSlider.value;
         m_musicSlider.value = 0;
+        SetMusic();
+
+        // Lưu giá trị volume trước khi mute vào SaveManager
+        if (SaveManager.Instance != null)
+        {
+            SaveManager.Instance.SavePreviousMusicVolume(m_previousMusicVolume);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("PreviousMusicVolume", m_previousMusicVolume);
+        }
+    }
+
+    public void UnmuteMusic()
+    {
+        // Kiểm tra giá trị volume trước khi mute từ SaveManager
+        if (SaveManager.Instance != null)
+        {
+            m_previousMusicVolume = SaveManager.Instance.GetPreviousMusicVolume();
+        }
+        else
+        {
+            m_previousMusicVolume = PlayerPrefs.GetFloat("PreviousMusicVolume");
+        }
+
+        m_musicSlider.value = m_previousMusicVolume;
         SetMusic();
     }
 
     public void MuteVFX()
     {
+        m_previousVFXVolume = m_vfxSlider.value;
         m_vfxSlider.value = 0;
         SetVFX();
+
+        // Lưu giá trị volume trước khi mute vào SaveManager
+        if (SaveManager.Instance != null)
+        {
+            SaveManager.Instance.SavePreviousVFXVolume(m_previousVFXVolume);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("PreviousVFXVolume", m_previousVFXVolume);
+        }
+    }
+
+    public void UnmuteVFX()
+    {
+        // Kiểm tra giá trị volume trước khi mute từ SaveManager
+        if (SaveManager.Instance != null)
+        {
+            m_previousVFXVolume = SaveManager.Instance.GetPreviousVFXVolume();
+        }
+        else
+        {
+            m_previousVFXVolume = PlayerPrefs.GetFloat("PreviousVFXVolume");
+        }
+
+        m_vfxSlider.value = m_previousVFXVolume;
+        SetVFX();
+    }
+
+    public float GetMusicVolume()
+    {
+        return SaveManager.Instance.GetMusicVolume();
+    }
+
+    public float GetVFXVolume()
+    {
+        return SaveManager.Instance.GetVFXVolume();
     }
 }

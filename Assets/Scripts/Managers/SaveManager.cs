@@ -9,6 +9,8 @@ public class SaveManager : MonoBehaviour
     private const string HighScoreKey = "HighScore";
     private const string MusicVolumeKey = "MusicVolume";
     private const string VFXVolumeKey = "VFXVolume";
+    private const string PreviousMusicVolumeKey = "PreviousMusicVolume";
+    private const string PreviousVFXVolumeKey = "PreviousVFXVolume";
 
     private void Awake()
     {
@@ -22,6 +24,18 @@ public class SaveManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    // Phương thức để lưu một giá trị bool
+    public void SaveBool(string key, bool value)
+    {
+        PlayerPrefs.SetString(key, value.ToString());
+    }
+
+    // Phương thức để lấy một giá trị bool
+    public string GetBool(string key)
+    {
+        return PlayerPrefs.GetString(key);
     }
 
     // Phương thức để lưu điểm cao
@@ -77,5 +91,25 @@ public class SaveManager : MonoBehaviour
 
         // Đảm bảo PlayerPrefs được lưu
         PlayerPrefs.Save();
+    }
+
+    public void SavePreviousMusicVolume(float volume)
+    {
+        PlayerPrefs.SetFloat(PreviousMusicVolumeKey, volume);
+    }
+
+    public float GetPreviousMusicVolume()
+    {
+        return PlayerPrefs.GetFloat(PreviousMusicVolumeKey, 1.0f);
+    }
+
+    public void SavePreviousVFXVolume(float volume)
+    {
+        PlayerPrefs.SetFloat(PreviousVFXVolumeKey, volume);
+    }
+
+    public float GetPreviousVFXVolume()
+    {
+        return PlayerPrefs.GetFloat(PreviousVFXVolumeKey, 1.0f);
     }
 }
