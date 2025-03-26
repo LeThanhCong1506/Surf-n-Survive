@@ -20,11 +20,11 @@ public class PlayerMovement
         else
             distance += Time.deltaTime * speedPowerUpDuration * 2;
         distanceToInt = Mathf.RoundToInt(distance);
-
     }
 
     public void HandleJump()
     {
+        AudioManager.Instance.PlayJumpSound();
         playerController.GetComponent<Animator>().SetBool("Jump", true);
         playerRb.AddForce(Vector2.up * playerController.JumpForce);
         playerController.IsOnGround = false;
@@ -32,6 +32,7 @@ public class PlayerMovement
 
     public void HandleHoldBend()
     {
+        AudioManager.Instance.PlayBendDownSound();
         playerController.WaitTurn = true;
         playerController.GetComponent<Animator>().SetInteger("Bend", 2);
         endHeight = playerController.GetComponent<BoxCollider2D>().size.y;

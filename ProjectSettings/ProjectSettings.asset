@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: 22s Studio
   productName: Surf n' Survive
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -142,7 +142,8 @@ PlayerSettings:
   tvOSBundleVersion: 1.0
   bundleVersion: 1.0
   preloadedAssets:
-  - {fileID: 11400000, guid: 0adb695d55b641444a89e16437edc69a, type: 2}
+  - {fileID: 0}
+  - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -287,7 +288,14 @@ PlayerSettings:
   AndroidAppBundleSizeToValidate: 150
   AndroidReportGooglePlayAppDependencies: 1
   androidSymbolsSizeThreshold: 800
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 10d70801db8ee0b489682fb86e4a1239, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
   m_BuildTargetShaderSettings: []
@@ -309,7 +317,10 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
-  m_BuildTargetDefaultTextureCompressionFormat: []
+  m_BuildTargetDefaultTextureCompressionFormat:
+  - serializedVersion: 3
+    m_BuildTarget: WebGL
+    m_Formats: 05000000
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -609,8 +620,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Surf n' Survive
-  metroPackageVersion: 
+  metroPackageName: SurfnSurvive
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -618,7 +629,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Surf n' Survive
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Surf n' Survive
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

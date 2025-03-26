@@ -55,7 +55,7 @@ public class ObstacleSpawner
 
             if (m_checkSpeed)
             {
-                m_gameManager.IncreaseAllMoveLeftSpeed(0.5f, 0.02f);
+                m_gameManager.IncreaseAllMoveLeftSpeed(0.9f, 0.03f);
                 m_checkSpeed = false;
             }
 

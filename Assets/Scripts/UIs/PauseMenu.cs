@@ -1,16 +1,38 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     private GameManager m_gameManager;
-    private PlayerController m_playerController;
+    [SerializeField] private GameObject m_pauseMenu;
+    [SerializeField] private GameObject m_resumeMenu;
 
     private void Start()
     {
         m_gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        m_playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current.escapeKey.wasPressedThisFrame &&
+            !m_gameManager.m_playerControllerScript.Gameover)
+        {
+            TogglePause();
+        }
+    }
+
+    public void TogglePause()
+    {
+        if (m_gameManager.IsPause)
+        {
+            m_resumeMenu.GetComponent<Button>().onClick.Invoke();
+        }
+        else
+        {
+            m_pauseMenu.GetComponent<Button>().onClick.Invoke();
+        }
     }
 
     public void Pause()
@@ -34,9 +56,12 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        // Đặt lại Time.timeScale về 1
         Time.timeScale = 1;
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void PlayButtonSound()
+    {
+        AudioManager.Instance.PlayButtonSound();
     }
 }

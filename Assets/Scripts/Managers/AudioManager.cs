@@ -12,11 +12,11 @@ public class AudioManager : MonoBehaviour
     [Header("---------- Audio Clip ----------")]
     public AudioClip[] BackgroundMusicGame;
     public AudioClip BackgroundMenu;
-    //public AudioClip BackgroundGame;
-    //public AudioClip Jump;
-    //public AudioClip Bend_Down;
-    //public AudioClip Hit_SpeedUp;
-    //public AudioClip Death;
+    public AudioClip ButtonSound;
+    public AudioClip Jump;
+    public AudioClip Bend_Down;
+    public AudioClip Hit_SpeedUp;
+    public AudioClip Death;
 
     private void Awake()
     {
@@ -32,9 +32,39 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void Pause()
+    {
+        musicSource.clip = null;
+    }
+
+    public void PlayJumpSound()
+    {
+        sfxSource.PlayOneShot(Jump);
+    }
+
+    public void PlayBendDownSound()
+    {
+        sfxSource.PlayOneShot(Bend_Down);
+    }
+
+    public void PlayHitSpeedUpSound()
+    {
+        sfxSource.PlayOneShot(Hit_SpeedUp);
+    }
+
+    public void PlayDeathSound()
+    {
+        sfxSource.PlayOneShot(Death);
+    }
+
     private void Start()
     {
         PlayBackgroundMenu();
+    }
+
+    public void PlayButtonSound()
+    {
+        sfxSource.PlayOneShot(ButtonSound);
     }
 
     public void PlayBackgroundMenu()
