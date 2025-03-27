@@ -124,7 +124,7 @@ public class VolumeSettings : MonoBehaviour
         SetMusic();
     }
 
-    public void MuteVFX()
+    public void MuteVFX ()
     {
         m_previousVFXVolume = m_vfxSlider.value;
         m_vfxSlider.value = 0;
