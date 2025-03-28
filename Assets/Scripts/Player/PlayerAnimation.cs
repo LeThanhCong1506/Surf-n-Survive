@@ -34,7 +34,7 @@ public class PlayerAnimation
     public IEnumerator WaitForStartSpeedPowerUp()
     {
         m_playerAnim.SetBool("Speed", true);
-        m_playerController.transform.position = new Vector2(m_playerController.transform.position.x + 0.25f, m_playerController.transform.position.y);
+        m_playerController.transform.position = new Vector2(m_playerController.transform.position.x + 0.18f, m_playerController.transform.position.y);
 
         yield return new WaitForSeconds(0.2f);
         m_gameManager.DeactivateEdgeCollider2D();
@@ -53,7 +53,7 @@ public class PlayerAnimation
         m_gameManager.IncreaseAllMoveLeftSpeed(-2, 0);
         yield return new WaitForSeconds(1);
         m_gameManager.IncreaseAllMoveLeftSpeed(-1, 0);
-        m_playerController.transform.position = new Vector2(m_playerController.transform.position.x - 0.25f, m_playerController.transform.position.y);
+        m_playerController.transform.position = new Vector2(m_playerController.transform.position.x - 0.18f, m_playerController.transform.position.y);
         m_gameManager.ActivateEdgeCollider2D();
         m_playerController.AteSpeed = false;
     }
