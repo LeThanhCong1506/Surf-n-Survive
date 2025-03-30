@@ -10,8 +10,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource sfxSource;
 
     [Header("---------- Audio Clip ----------")]
-    public AudioClip[] BackgroundMusicGame;
-    public AudioClip BackgroundMenu;
+    public AudioClip[] BackgroundMenuGame;
+    public AudioClip[] BackgroundGameSound;
     public AudioClip ButtonSound;
     public AudioClip Jump;
     public AudioClip Bend_Down;
@@ -32,6 +32,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayBendDownSound()
+    {
+        sfxSource.PlayOneShot(Bend_Down);
+    }
+
     public void Pause()
     {
         musicSource.clip = null;
@@ -40,11 +45,6 @@ public class AudioManager : MonoBehaviour
     public void PlayJumpSound()
     {
         sfxSource.PlayOneShot(Jump);
-    }
-
-    public void PlayBendDownSound()
-    {
-        sfxSource.PlayOneShot(Bend_Down);
     }
 
     public void PlayHitSpeedUpSound()
@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayBackgroundMenu();
+        PlayBackgroundMenuGame();
     }
 
     public void PlayButtonSound()
@@ -67,16 +67,17 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(ButtonSound);
     }
 
-    public void PlayBackgroundMenu()
+    public void PlayBackgroundMenuGame()
     {
-        musicSource.clip = BackgroundMenu;
+        int randomIndex = Random.Range(0, BackgroundMenuGame.Length);
+        musicSource.clip = BackgroundMenuGame[randomIndex];
         musicSource.Play();
     }
 
     public void PlayBackgroundMusicGame()
     {
-        int randomIndex = Random.Range(0, BackgroundMusicGame.Length);
-        musicSource.clip = BackgroundMusicGame[randomIndex];
+        int randomIndex = Random.Range(0, BackgroundGameSound.Length);
+        musicSource.clip = BackgroundGameSound[randomIndex];
         musicSource.Play();
     }
 

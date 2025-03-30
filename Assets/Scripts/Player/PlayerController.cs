@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
         m_playerMovement.UpdateDistance(ref m_distance, ref m_distanceToInt, SpeedPowerUpDuration, AteSpeed);
         DistanceToInt = m_distanceToInt;
 
+        if (AteSpeed)
+            return;
 
         if (Input.GetKeyDown(KeyCode.UpArrow) && IsOnGround)
         {
