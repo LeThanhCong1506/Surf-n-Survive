@@ -5,11 +5,29 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject m_loadingScene;
+    [SerializeField] private GameObject m_loadingScreen;
+    [SerializeField] private Slider m_loadingSlider;
+    [SerializeField] private Sprite[] m_loadingImages;
 
     public void PlayGame()
     {
-        //StartCoroutine(LoadScene());
+        StartCoroutine(SetLoading());
+    }
+
+    IEnumerator SetLoading()
+    {
+        m_loadingScreen.GetComponent<Image>().sprite
+    = m_loadingImages[Random.Range(0, m_loadingImages.Length)];
+
+        m_loadingSlider.value = 0;
+        // Set loading screen
+        while (m_loadingSlider.value < 1)
+        {
+            m_loadingSlider.value += 0.005f;
+            yield return new WaitForSeconds(0.02f);
+        }
+
+        yield return new WaitForSeconds(0.5f);
 
         var checkPlayedStoryScene = SaveManager.Instance.GetBool("PlayedStoryScene");
         if (checkPlayedStoryScene != "True")
@@ -20,17 +38,6 @@ public class MainMenu : MonoBehaviour
         else
             SceneManager.LoadScene(2);
     }
-
-    //IEnumerator LoadScene()
-    //{
-    //    m_loadingScene.SetActive(true);
-    //    for (int i = 0; i < 100; i++)
-    //    {
-    //        m_loadingScene.GetComponent<Slider>().value = i;
-    //        yield return new WaitForSeconds(10f);
-    //    }
-    //    m_loadingScene.SetActive(false);
-    //}
 
     public void QuitGame()
     {

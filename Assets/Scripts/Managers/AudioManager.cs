@@ -32,6 +32,22 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public void PlayBendDownSound()
+    {
+        sfxSource.PlayOneShot(Bend_Down);
+    }
+
+    public void PlayBendDownSound2()
+    {
+        sfxSource.clip = Bend_Down;
+        sfxSource.Play();
+    }
+
+    public void PauseVFX()
+    {
+        sfxSource.clip = null;
+    }
+
     public void Pause()
     {
         musicSource.clip = null;
@@ -40,11 +56,6 @@ public class AudioManager : MonoBehaviour
     public void PlayJumpSound()
     {
         sfxSource.PlayOneShot(Jump);
-    }
-
-    public void PlayBendDownSound()
-    {
-        sfxSource.PlayOneShot(Bend_Down);
     }
 
     public void PlayHitSpeedUpSound()
