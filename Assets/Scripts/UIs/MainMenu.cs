@@ -17,11 +17,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject m_darkOverlay;
     [SerializeField] private GameObject m_blur;
 
-    //private void Start()
-    //{
-    //    AudioManager.Instance.PlayBackgroundMenu();
-    //}
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))

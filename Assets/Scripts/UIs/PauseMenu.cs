@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     private GameManager m_gameManager;
     [SerializeField] private GameObject m_pauseMenu;
     [SerializeField] private GameObject m_resumeMenu;
+    [SerializeField] private GameObject m_rank;
 
     private void Start()
     {
@@ -16,15 +17,22 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame &&
-            !m_gameManager.m_playerControllerScript.Gameover)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            TogglePause();
+            if (m_rank.activeSelf)
+            {
+                m_rank.SetActive(false);
+            }
+            else if (!m_gameManager.m_playerControllerScript.Gameover)
+            {
+                TogglePause();
+            }
         }
     }
 
     public void TogglePause()
     {
+        //kích hoạt nút pause và resume
         if (m_gameManager.IsPause)
         {
             m_resumeMenu.GetComponent<Button>().onClick.Invoke();
