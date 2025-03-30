@@ -33,6 +33,7 @@ public class PlayerAnimation
 
     public IEnumerator WaitForStartSpeedPowerUp()
     {
+        m_playerController.AteSpeed = true;
         m_playerAnim.SetBool("Speed", true);
         m_playerController.transform.position = new Vector2(m_playerController.transform.position.x + 0.18f, m_playerController.transform.position.y);
 
