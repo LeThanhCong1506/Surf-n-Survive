@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
             if (m_rank.activeSelf)
             {
                 m_rank.SetActive(false);
+                PlayButtonSound();
             }
             else if (!m_gameManager.m_playerControllerScript.Gameover)
             {
