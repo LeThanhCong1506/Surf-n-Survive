@@ -45,7 +45,7 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1;
-        AudioManager.Instance.PlayBackgroundMenu();
+        AudioManager.Instance.PlayBackgroundMenuGame();
     }
 
     public void Resume()
