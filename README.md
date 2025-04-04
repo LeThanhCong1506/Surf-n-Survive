@@ -40,7 +40,7 @@ https://drive.google.com/file/d/19hRdnnfogIc44ItN42sCHqAOupR8_WEk/view?usp=shari
 ## 📥 Installation
 - **Android**: Download from the Play Store (Coming soon!).
 - **Itch.io**: (Coming soon!)
-- **PC**: [Download Here](https://drive.google.com/file/d/1Nw-7rBAQGKx_Oe-yiguqa-3u3w47hxQP/view?usp=sharing) *(TBD)*
+- **PC**: [Download Here](https://drive.google.com/file/d/1Nw-7rBAQGKx_Oe-yiguqa-3u3w47hxQP/view?usp=sharing)
 
 ## 🚀 Future Updates
 - 🎭 **New Skins & Boards** – Customize your ride!
