@@ -1,13 +1,17 @@
 # 🌊 Surf n' Survive - Ride the Wave of Chaos! 🏄‍♀️
 
 ## 🎮 About the Game
-Welcome to **Surf n' Survive**! This isn’t your typical endless runner—this is the **wildest** surfing adventure you’ve ever seen! You control **a fearless old lady** riding the waves on **her trusty old man surfboard**. Dodge obstacles, grab crazy power-ups, and **SURVIVE** as long as possible!
+Welcome to **Surf n' Survive**! This isn’t your typical endless runner—this is the **
+wildest** surfing adventure you’ve ever seen! You control **a fearless old lady** riding the waves on **her trusty old man surfboard**. Dodge obstacles, grab crazy power-ups, and **SURVIVE** as long as possible!
 
 This project was developed using **Unity** and **C#**, incorporating advanced physics mechanics to create a smooth surfing experience. The game utilizes **procedural obstacle generation** and **adaptive difficulty scaling** to keep players engaged.
 
 ## 📸 Screenshots & Trailer
 🎥 **Game Trailer:** 
 https://drive.google.com/file/d/19hRdnnfogIc44ItN42sCHqAOupR8_WEk/view?usp=sharing
+
+🎥 **Gameplay Demo:** 
+https://drive.google.com/file/d/1r3RSNfwHGyxwAN0P-0oXk1ovj8ZIV2xV/view?usp=sharing
 
 🖼️ **Screenshots:**  
 ![Screenshot 1](https://github.com/LeThanhCong1506/Surf-n-Survive/blob/develop/Medias/Screenshot%202025-03-27%20154302.png)  
