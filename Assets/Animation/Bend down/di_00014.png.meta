@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 41cd41ba1217aca4ba119bd6808a8b29
+guid: 35c82796fd06c244fbe0d983f673b351
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5367586702683372534
-    second: ditme_00007_0
+      213: -6310097738804947200
+    second: ditme_00014_0
   - first:
-      213: -5233226863004327992
-    second: ditme_00007_1
-  - first:
-      213: -3931110188130654344
-    second: ditme_00007_2
+      213: 5478035869840198325
+    second: ditme_00014_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,17 +112,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ditme_00007_1
+      name: ditme_00014_1
       rect:
         serializedVersion: 2
-        x: 353
-        y: 369
-        width: 995
-        height: 581
+        x: 394
+        y: 375
+        width: 950
+        height: 562
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,8 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8cf589915e7df57b0800000000000000
-      internalID: -5233226863004327992
+      spriteID: 5ba4ca88994e50c40800000000000000
+      internalID: 5478035869840198325
       vertices: []
       indices: 
       edges: []
@@ -144,7 +154,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0ac289f6d05254e43bab2d83be226ba8
+    spriteID: 05174059603668e4fbafb6b6dfc4fb50
     internalID: 0
     vertices: []
     indices: 
@@ -154,7 +164,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ditme_00007_1: -5233226863004327992
+      ditme_00014_1: 5478035869840198325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

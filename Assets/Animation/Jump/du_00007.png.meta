@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 63fed61bb08f1c141a8c354ccbfdc8ec
+guid: 935f484dfe262c24baa7fa0157e70563
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8059816488047770173
-    second: ditme_00005_0
+      213: 4112009928324776261
+    second: duma_00007_0
   - first:
-      213: -3789769661489793774
-    second: ditme_00005_1
+      213: -7191940883359953616
+    second: duma_00007_1
+  - first:
+      213: 2072507881285754846
+    second: duma_00007_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,17 +115,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ditme_00005_1
+      name: duma_00007_1
       rect:
         serializedVersion: 2
-        x: 396
-        y: 375
-        width: 950
-        height: 627
+        x: 360
+        y: 355
+        width: 983
+        height: 655
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +147,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 215395a6298086bc0800000000000000
-      internalID: -3789769661489793774
+      spriteID: 03d88b10fd7113c90800000000000000
+      internalID: -7191940883359953616
       vertices: []
       indices: 
       edges: []
@@ -141,7 +157,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3191f61f309bf8145b74fc683112659c
+    spriteID: 5e3c450efdf73204bad95f9680bc4532
     internalID: 0
     vertices: []
     indices: 
@@ -151,7 +167,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ditme_00005_1: -3789769661489793774
+      duma_00007_1: -7191940883359953616
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
