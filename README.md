@@ -50,7 +50,6 @@ https://drive.google.com/file/d/1r3RSNfwHGyxwAN0P-0oXk1ovj8ZIV2xV/view?usp=shari
 - 🎭 **New Skins & Boards** – Customize your ride!
 - 🌍 **Different Environments** – Surf through deserts, lava flows, and icy waters.
 - 🏆 **Leaderboards & Achievements** – Show off your skills to the world!
-- 📱 **Multiplayer Mode** – Race against friends in real-time surfing battles.
 
 ## 👨‍💻 Developer Contributions
 **ASSETS:**
