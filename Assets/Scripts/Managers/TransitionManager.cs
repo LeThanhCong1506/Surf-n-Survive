@@ -8,23 +8,6 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private GameObject m_backGround;
     [SerializeField] private GameObject m_backGround1;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            m_backGround.SetActive(false);
-            m_backGround1.SetActive(true);
-            PlayButtonSound();
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            m_backGround.SetActive(true);
-            m_backGround1.SetActive(false);
-            PlayButtonSound();
-        }
-    }
-
     private void Start()
     {
         StartCoroutine(TurnOffVideo());
