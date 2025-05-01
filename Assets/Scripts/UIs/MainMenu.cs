@@ -19,19 +19,6 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            m_background.SetActive(false);
-            m_background1.SetActive(true);
-            PlayButtonSound();
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            m_background.SetActive(true);
-            m_background1.SetActive(false);
-            PlayButtonSound();
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (m_credit.activeSelf)
