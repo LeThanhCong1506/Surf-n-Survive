@@ -6,12 +6,29 @@ wildest** surfing adventure you’ve ever seen! You control **a fearless old lad
 
 This project was developed using **Unity** and **C#**, incorporating advanced physics mechanics to create a smooth surfing experience. The game utilizes **procedural obstacle generation** and **adaptive difficulty scaling** to keep players engaged.
 
+## 🏅 Achievements
+
+* 🌟 **Showcased** and received **positive feedback** at the **FPT Meta Art Exhibition**, hosted by **FPT University**.
+* 🏆 Selected as **one of the Top 37 best games out of 60 submissions** to reach the **evaluation round** of the **Vietnam GameHub 2025** program.
+* 📰 **Featured in [VNExpress](https://vnexpress.net/cong-nghe/vgv-2025)** as part of the **Vietnam GameVerse** initiative.
+
+### 📸 Exhibition & Media Highlights
+
+![FPT Meta Art Exhibition Display](https://your-image-link-here.com)
+*Caption: Booth at FPT Meta Art Exhibition*
+
+![Vietnam GameHub 2025 Result](https://your-image-link-here.com)
+*Caption: Game listed in Top 37 - Vietnam GameHub 2025*
+
+![VNExpress Feature Screenshot](https://your-image-link-here.com)
+*Caption: Article featuring the game on VNExpress*
+
 ## 📸 Screenshots & Trailer
 🎥 **Game Trailer:** 
-https://drive.google.com/file/d/19hRdnnfogIc44ItN42sCHqAOupR8_WEk/view?usp=sharing
+[Link](https://drive.google.com/file/d/19hRdnnfogIc44ItN42sCHqAOupR8_WEk/view?usp=sharing)
 
 🎥 **Gameplay Demo:** 
-https://drive.google.com/file/d/1r3RSNfwHGyxwAN0P-0oXk1ovj8ZIV2xV/view?usp=sharing
+[Link](https://drive.google.com/file/d/1r3RSNfwHGyxwAN0P-0oXk1ovj8ZIV2xV/view?usp=sharing)
 
 🖼️ **Screenshots:**  
 ![Screenshot 1](https://github.com/LeThanhCong1506/Surf-n-Survive/blob/develop/Medias/Screenshot%202025-03-27%20154302.png)  
