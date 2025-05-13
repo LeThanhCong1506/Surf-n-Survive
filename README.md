@@ -10,7 +10,7 @@ This project was developed using **Unity** and **C#**, incorporating advanced ph
 
 * 🌟 **Showcased** and received **positive feedback** at the **FPT Meta Art Exhibition**, hosted by **FPT University**.
 * 🏆 Selected as **one of the Top 37 best games out of 60 submissions** to reach the **evaluation round** of the **Vietnam GameHub 2025** program.
-* 📰 **Featured in [VNExpress](https://vnexpress.net/cong-nghe/vgv-2025)** as part of the **Vietnam GameVerse** initiative.
+* 📰 **Featured in [VNExpress](https://vnexpress.net/cong-nghe/vgv-2025)** as part of the **Vietnam Gameverse** initiative.
 
 ### 📸 Exhibition & Media Highlights
 
