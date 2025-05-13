@@ -14,12 +14,12 @@ This project was developed using **Unity** and **C#**, incorporating advanced ph
 
 ### 📸 Exhibition & Media Highlights
 
-| ![FPT Meta Art Exhibition Display](Medias/z6598322463540_f541e9d6e15d02465ceab5811141ab35.jpg) | ![Vietnam GameHub 2025 Result](Medias/z6598329461372_72889a25555f28dea21cb1ca1a7a75af.jpg) |
+| <img src="Medias/z6598322463540_f541e9d6e15d02465ceab5811141ab35.jpg" width="500"/> | <img src="Medias/z6598329461372_72889a25555f28dea21cb1ca1a7a75af.jpg" width="500"/> |
 |:--:|:--:|
 | *Booth at FPT Meta Art Exhibition* | *Game listed in Top 37 - Vietnam GameHub 2025* |
 
 ![VNExpress Feature Screenshot](Medias/z6595454227820_48a00a220b0e642f1da927431e9fe2ae.jpg)  
-*Caption: Article featuring the game on VNExpress*
+*Article featuring the game on VNExpress*
 
 ## 📸 Screenshots & Trailer
 🎥 **Game Trailer:** 
