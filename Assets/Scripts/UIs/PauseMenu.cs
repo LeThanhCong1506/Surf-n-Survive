@@ -3,6 +3,11 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the pause menu functionality, including pausing and resuming the game,
+/// navigating to the home screen, restarting the game, and handling UI interactions.
+/// Integrates with GameManager and AudioManager for state management and audio feedback.
+/// </summary>
 public class PauseMenu : MonoBehaviour
 {
     private GameManager m_gameManager;
@@ -33,7 +38,6 @@ public class PauseMenu : MonoBehaviour
 
     public void TogglePause()
     {
-        //kích hoạt nút pause và resume
         if (m_gameManager.IsPause)
         {
             m_resumeMenu.GetComponent<Button>().onClick.Invoke();

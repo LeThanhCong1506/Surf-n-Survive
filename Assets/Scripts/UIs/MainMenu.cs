@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the main menu functionality, including starting the game, handling UI interactions,
+/// and managing transitions to other scenes. Integrates with SaveManager and AudioManager for state persistence and audio feedback.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject m_loadingScreen;
@@ -58,7 +62,7 @@ public class MainMenu : MonoBehaviour
     = m_loadingImages[Random.Range(0, m_loadingImages.Length)];
 
         m_loadingSlider.value = 0;
-        // Set loading screen
+
         while (m_loadingSlider.value < 1)
         {
             m_loadingSlider.value += 0.005f;

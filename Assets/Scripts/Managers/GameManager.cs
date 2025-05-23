@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
 
+/// <summary>
+/// Manages the overall game flow, including spawning obstacles, handling power-ups,
+/// updating UI elements, and managing game states such as pause and game over.
+/// </summary>
 public class GameManager : MonoBehaviour
 {
     public GameObject[] ObstaclePrefab;

@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+/// <summary>
+/// Manages applying and removing blur effects on SpriteRenderers in the scene.
+/// Dynamically adjusts materials based on object names and tags to create a blur effect.
+/// </summary>
 public class BlurSpriteRenderer : MonoBehaviour
 {
-    public Material[] blurMaterial; // Material Blur được gán trong Inspector
-    private Material[] m_originalMaterials; // Lưu lại material gốc của từng RawImage
+    public Material[] BlurMaterial;
+    private Material[] m_originalMaterials;
     private GameObject[] m_findMoveLeft;
     private GameObject[] m_findStand;
 
@@ -45,7 +49,7 @@ public class BlurSpriteRenderer : MonoBehaviour
 
     private void ApplyBlurToObjects(GameObject[] objects)
     {
-        if (objects == null || blurMaterial == null) return;
+        if (objects == null || BlurMaterial == null) return;
 
         foreach (var obj in objects)
         {
@@ -57,31 +61,31 @@ public class BlurSpriteRenderer : MonoBehaviour
             switch (obj.name)
             {
                 case string name when name.Contains("Trash") || name.Contains("Speed"):
-                    spriteRenderer.material = blurMaterial[2];
+                    spriteRenderer.material = BlurMaterial[2];
                     break;
                 case string name when name.Contains("Seagull"):
-                    spriteRenderer.material = blurMaterial[4];
+                    spriteRenderer.material = BlurMaterial[4];
                     break;
                 case string name when name.Contains("Mountain"):
-                    spriteRenderer.material = blurMaterial[4];
+                    spriteRenderer.material = BlurMaterial[4];
                     spriteRenderer.sortingOrder = -3;
                     break;
                 case string name when name.Contains("Ground"):
                     spriteRenderer.sortingOrder = -2;
-                    spriteRenderer.material = blurMaterial[3];
+                    spriteRenderer.material = BlurMaterial[3];
                     break;
                 case "Beach Opacity":
-                    spriteRenderer.material = blurMaterial[5];
+                    spriteRenderer.material = BlurMaterial[5];
                     break;
                 case "Beach Inside":
                     spriteRenderer.sortingOrder = -1;
-                    spriteRenderer.material = blurMaterial[3];
+                    spriteRenderer.material = BlurMaterial[3];
                     break;
                 case "Player":
-                    spriteRenderer.material = blurMaterial[1];
+                    spriteRenderer.material = BlurMaterial[1];
                     break;
                 default:
-                    spriteRenderer.material = blurMaterial[0];
+                    spriteRenderer.material = BlurMaterial[0];
                     break;
             }
         }
