@@ -1,8 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// Manages all audio-related functionality in the game, including background music,
+/// sound effects, and button click sounds. Ensures a singleton instance for global access.
+/// </summary>
 public class AudioManager : MonoBehaviour
 {
-    // Singleton instance
     public static AudioManager Instance { get; private set; }
 
     [Header("---------- Audio Source ----------")]
@@ -20,7 +23,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        // Đảm bảo chỉ có một instance của AudioManager tồn tại
         if (Instance == null)
         {
             Instance = this;

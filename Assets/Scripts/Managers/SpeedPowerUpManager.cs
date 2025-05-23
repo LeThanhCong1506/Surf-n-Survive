@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Manages the spawning of speed power-ups at random intervals and positions.
+/// Temporarily pauses obstacle spawning while a speed power-up is being spawned.
+/// </summary>
 public class SpeedPowerUpManager
 {
     private GameManager m_gameManager;
@@ -26,10 +30,10 @@ public class SpeedPowerUpManager
             var randomTime = Random.Range(20.0f, 60.0f);
             yield return new WaitForSeconds(randomTime);
 
-            m_obstacleSpawner.IsSpawningSpeedItem = true; // Đặt biến này thành true trước khi spawn speed item
+            m_obstacleSpawner.IsSpawningSpeedItem = true;
             Object.Instantiate(m_speedPrefab, new Vector3(15,Random.Range(-2.7f, 0.7f), 0), m_speedPrefab.transform.rotation);
-            yield return new WaitForSeconds(1); // Thời gian chờ để đảm bảo speed item được spawn trước
-            m_obstacleSpawner.IsSpawningSpeedItem = false; // Đặt lại biến này thành false sau khi spawn xong
+            yield return new WaitForSeconds(1);
+            m_obstacleSpawner.IsSpawningSpeedItem = false;
         }
     }
 }

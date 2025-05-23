@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Moves the GameObject to the left at a specified speed.
+/// Stops movement when the game is over.
+/// </summary>
 public class MoveLeft : MonoBehaviour
 {
     public float Speed;
@@ -18,8 +22,6 @@ public class MoveLeft : MonoBehaviour
         if (m_playerControllerScript.Gameover)
             return;
 
-        // sử dụng tọa độ của thế giới để di chuyển vật thể sang trái,
-        //không phụ thuộc vào hướng của vật thể.
         transform.Translate(Vector3.left * Time.fixedDeltaTime * Speed, Space.World);
     }
 

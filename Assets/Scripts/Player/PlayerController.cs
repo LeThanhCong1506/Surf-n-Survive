@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Manages the player's core behavior, including movement, collision handling, and power-up interactions.
+/// Integrates with other components such as PlayerAnimation, PlayerMovement, and PlayerPowerUp to handle specific functionalities.
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D m_playerRb;

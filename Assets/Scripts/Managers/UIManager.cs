@@ -1,6 +1,10 @@
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages the UI elements of the game, including updating distance labels,
+/// handling UI visibility during pause and game over states, and managing best scores.
+/// </summary>
 public class UIManager : MonoBehaviour
 {
     private TextMeshProUGUI m_distanceLabel;

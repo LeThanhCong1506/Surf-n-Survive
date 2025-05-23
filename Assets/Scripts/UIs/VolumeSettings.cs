@@ -2,6 +2,11 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the audio volume settings for music and VFX in the game.
+/// Provides functionality to adjust, mute, and unmute audio levels, and saves the settings persistently.
+/// Integrates with SaveManager for data storage and AudioMixer for real-time audio adjustments.
+/// </summary>
 public class VolumeSettings : MonoBehaviour
 {
     [SerializeField] private AudioMixer m_myMixer;
@@ -13,14 +18,12 @@ public class VolumeSettings : MonoBehaviour
 
     private void Start()
     {
-        // Kiểm tra xem SaveManager có tồn tại không
         if (SaveManager.Instance != null)
         {
             LoadMusicAndVFX();
         }
         else
         {
-            // Fallback nếu SaveManager chưa được khởi tạo
             if (PlayerPrefs.HasKey("MusicVolume"))
             {
                 LoadMusicAndVFX();
@@ -35,7 +38,6 @@ public class VolumeSettings : MonoBehaviour
 
     private void LoadMusicAndVFX()
     {
-        // Sử dụng SaveManager để tải cài đặt
         if (SaveManager.Instance != null)
         {
             m_musicSlider.value = SaveManager.Instance.GetMusicVolume();
@@ -60,7 +62,6 @@ public class VolumeSettings : MonoBehaviour
             m_myMixer.SetFloat("music", -80);
         }
 
-        // Sử dụng SaveManager để lưu cài đặt
         if (SaveManager.Instance != null)
         {
             SaveManager.Instance.SaveMusicVolume(volume);
@@ -80,7 +81,6 @@ public class VolumeSettings : MonoBehaviour
             m_myMixer.SetFloat("vfx", -80);
         }
 
-        // Sử dụng SaveManager để lưu cài đặt
         if (SaveManager.Instance != null)
         {
             SaveManager.Instance.SaveVFXVolume(volume);
@@ -97,7 +97,6 @@ public class VolumeSettings : MonoBehaviour
         m_musicSlider.value = 0;
         SetMusic();
 
-        // Lưu giá trị volume trước khi mute vào SaveManager
         if (SaveManager.Instance != null)
         {
             SaveManager.Instance.SavePreviousMusicVolume(m_previousMusicVolume);
@@ -110,7 +109,6 @@ public class VolumeSettings : MonoBehaviour
 
     public void UnmuteMusic()
     {
-        // Kiểm tra giá trị volume trước khi mute từ SaveManager
         if (SaveManager.Instance != null)
         {
             m_previousMusicVolume = SaveManager.Instance.GetPreviousMusicVolume();
@@ -130,7 +128,6 @@ public class VolumeSettings : MonoBehaviour
         m_vfxSlider.value = 0;
         SetVFX();
 
-        // Lưu giá trị volume trước khi mute vào SaveManager
         if (SaveManager.Instance != null)
         {
             SaveManager.Instance.SavePreviousVFXVolume(m_previousVFXVolume);
@@ -143,7 +140,6 @@ public class VolumeSettings : MonoBehaviour
 
     public void UnmuteVFX()
     {
-        // Kiểm tra giá trị volume trước khi mute từ SaveManager
         if (SaveManager.Instance != null)
         {
             m_previousVFXVolume = SaveManager.Instance.GetPreviousVFXVolume();

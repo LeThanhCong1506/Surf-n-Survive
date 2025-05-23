@@ -1,3 +1,7 @@
+/// <summary>
+/// A custom shader designed to support background blurring when integrated into UI elements.
+/// Provides a Gaussian blur effect with adjustable intensity.
+/// </summary>
 Shader "Unlit/UIBlurShader"
 {
     Properties
@@ -9,9 +13,9 @@ Shader "Unlit/UIBlurShader"
     SubShader
     {
         Tags { "Queue" = "Overlay" }
-        Blend SrcAlpha OneMinusSrcAlpha // Kích hoạt alpha blending
-        ZWrite Off // Tắt ghi Z-buffer
-        Cull Off   // Tắt culling cho đối tượng trong suốt
+        Blend SrcAlpha OneMinusSrcAlpha
+        ZWrite Off
+        Cull Off
 
         Pass
         {
@@ -54,7 +58,6 @@ Shader "Unlit/UIBlurShader"
                 float2 uv = i.uv;
                 half4 color = half4(0, 0, 0, 0);
 
-                // Giảm hệ số làm mờ để tránh ảnh quá nhòe
                 float blur = _BlurSize * 0.005;
                 float2 texelSize = float2(blur, blur);
 

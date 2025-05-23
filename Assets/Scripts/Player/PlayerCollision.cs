@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+/// <summary>
+/// Handles player collision events, including interactions with obstacles and the ground.
+/// Triggers appropriate animations and game state changes based on collision types.
+/// </summary>
 public class PlayerCollision : MonoBehaviour
 {
     private PlayerController m_playerController;
