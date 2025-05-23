@@ -5,7 +5,6 @@ using UnityEngine;
 /// </summary>
 public class RotateObject : MonoBehaviour
 {
-    // Tốc độ quay tính theo độ trên giây.
     public float RotationSpeed;
 
     void Update()
