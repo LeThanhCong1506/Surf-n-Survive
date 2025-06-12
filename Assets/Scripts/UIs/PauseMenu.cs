@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -50,6 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        Debug.Log("Pause called");
         m_gameManager.IsPause = true;
         Time.timeScale = 0;
     }
@@ -63,6 +66,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Debug.Log("Resume called");
         m_gameManager.IsPause = false;
         Time.timeScale = 1;
     }

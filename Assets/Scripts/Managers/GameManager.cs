@@ -86,31 +86,13 @@ public class GameManager : MonoBehaviour
         m_resumeButton.SetActive(false);
     }
 
-    public void IncreaseAllMoveLeftSpeed(float amount, float increaseCountMeter)
+    public void IncreaseAllMoveLeftSpeed(float speed, float increaseCountMeter)
     {
         var moveLeftScripts = FindObjectsByType<MoveLeft>(FindObjectsSortMode.None);
         foreach (var moveLeft in moveLeftScripts)
         {
-            moveLeft.IncreaseSpeed(amount);
+            moveLeft.IncreaseSpeed(speed);
             m_playerControllerScript.IncreaseCountMeter(increaseCountMeter);
-        }
-    }
-
-    public void DeactivateEdgeCollider2D()
-    {
-        var edgeCollider2Ds = GameObject.FindGameObjectsWithTag("Obstacle");
-        foreach (var edgeCollider2D in edgeCollider2Ds)
-        {
-            edgeCollider2D.gameObject.GetComponent<EdgeCollider2D>().enabled = false;
-        }
-    }
-
-    public void ActivateEdgeCollider2D()
-    {
-        var edgeCollider2Ds = GameObject.FindGameObjectsWithTag("Obstacle");
-        foreach (var edgeCollider2D in edgeCollider2Ds)
-        {
-            edgeCollider2D.gameObject.GetComponent<EdgeCollider2D>().enabled = true;
         }
     }
 

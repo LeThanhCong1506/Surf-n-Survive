@@ -10,10 +10,11 @@ public class ObstacleSpawner
 {
     private GameManager m_gameManager;
     private GameObject[] m_obstaclePrefab;
+    private ObjectPool[] m_obstaclePools;
     private float m_startDelay;
     private float m_repeatRate;
     private bool m_checkSpeed = false;
-    public bool IsSpawningSpeedItem = false; // Thêm biến này
+    public bool IsSpawningSpeedItem = false;
 
     public ObstacleSpawner(GameManager manager, GameObject[] prefabs, float delay, float rate)
     {
@@ -21,6 +22,15 @@ public class ObstacleSpawner
         m_obstaclePrefab = prefabs;
         m_startDelay = delay;
         m_repeatRate = rate;
+
+        if(m_gameManager.m_playerControllerScript.Gameover)
+            return;
+
+        m_obstaclePools = new ObjectPool[m_obstaclePrefab.Length];
+        for (int i = 0; i < m_obstaclePrefab.Length; i++)
+        {
+            m_obstaclePools[i] = new ObjectPool(m_obstaclePrefab[i], 5);
+        }
     }
 
     public void StartSpawning()
@@ -34,9 +44,9 @@ public class ObstacleSpawner
         yield return new WaitForSeconds(m_startDelay);
         while (!m_gameManager.m_playerControllerScript.Gameover)
         {
-            if (IsSpawningSpeedItem) // Kiểm tra nếu đang spawn speed item
+            if (IsSpawningSpeedItem)
             {
-                yield return null; // Tạm dừng việc spawn obstacle
+                yield return null;
                 continue;
             }
 
@@ -56,7 +66,7 @@ public class ObstacleSpawner
                 spawnPos = new Vector3(10, Random.Range(-3.3f, -3.0f), 0);
             }
 
-            Object.Instantiate(m_obstaclePrefab[obstacleIndex], spawnPos, m_obstaclePrefab[obstacleIndex].transform.rotation);
+            var obstacle = m_obstaclePools[obstacleIndex].Get(spawnPos, m_obstaclePrefab[obstacleIndex].transform.rotation);
 
             if (m_checkSpeed)
             {
