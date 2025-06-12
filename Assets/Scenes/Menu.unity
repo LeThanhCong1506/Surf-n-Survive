@@ -2394,7 +2394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 266c61d268464a84f868339198eeaad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images:
+  Images:
   - {fileID: 1465059192}
   - {fileID: 100817496}
   - {fileID: 801669616}
@@ -2403,7 +2403,7 @@ MonoBehaviour:
   - {fileID: 844229707}
   - {fileID: 177546332}
   - {fileID: 1997623997}
-  blurMaterial:
+  BlurMaterial:
   - {fileID: 2100000, guid: 062fa5491c4afb645b0e405dfd9a8880, type: 2}
   - {fileID: 2100000, guid: 1bb3bae3d151d2547830b9bd759e68d0, type: 2}
   - {fileID: 2100000, guid: 930a33678e6aa9947ae4dac15561590a, type: 2}

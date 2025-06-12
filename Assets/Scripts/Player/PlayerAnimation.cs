@@ -42,7 +42,6 @@ public class PlayerAnimation
         m_playerController.transform.position = new Vector2(m_playerController.transform.position.x + 0.18f, m_playerController.transform.position.y);
 
         yield return new WaitForSeconds(0.2f);
-        m_gameManager.DeactivateEdgeCollider2D();
         m_gameManager.IncreaseAllMoveLeftSpeed(10, 0);
         m_playerController.StartCoroutine(WaitForEndSpeedPowerUp());
     }
@@ -59,7 +58,6 @@ public class PlayerAnimation
         yield return new WaitForSeconds(1);
         m_gameManager.IncreaseAllMoveLeftSpeed(-1, 0);
         m_playerController.transform.position = new Vector2(m_playerController.transform.position.x - 0.18f, m_playerController.transform.position.y);
-        m_gameManager.ActivateEdgeCollider2D();
         m_playerController.AteSpeed = false;
     }
 }
