@@ -22,8 +22,8 @@ This project was developed using **Unity** and **C#**, incorporating advanced ph
 *Article featuring the game on VNExpress*
 
 ## 📑 Project Brief
-This Project Brief serves as a centralized document that compiles all relevant materials and resources for the project, including our game demo, gameplay video, design documents (GDD, TDD) and other documents
-[Link Here](https://drive.google.com/file/d/1GyENGQaP2TwrNkrPGPZ8bP-0R1B4W-1b/view?usp=sharing)
+This Project Brief serves as a centralized document that compiles all relevant materials and resources for the project, including our game demo, gameplay video, design documents (GDD, TDD) and other documents, you can click 
+[Link Here](https://drive.google.com/file/d/1GyENGQaP2TwrNkrPGPZ8bP-0R1B4W-1b/view?usp=sharing) to see more details
 
 ## 📸 Screenshots & Trailer
 🎥 **Game Trailer:** 
