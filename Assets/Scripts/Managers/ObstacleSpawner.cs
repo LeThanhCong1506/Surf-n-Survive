@@ -68,6 +68,8 @@ public class ObstacleSpawner
 
             var obstacle = m_obstaclePools[obstacleIndex].Get(spawnPos, m_obstaclePrefab[obstacleIndex].transform.rotation);
 
+            obstacle.GetComponent<MoveLeft>().OnOutOfScreen += () => m_obstaclePools[obstacleIndex].Return(obstacle);
+
             if (m_checkSpeed)
             {
                 m_gameManager.IncreaseAllMoveLeftSpeed(0.9f, 0.03f);
