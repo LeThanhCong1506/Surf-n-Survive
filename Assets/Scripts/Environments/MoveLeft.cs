@@ -21,7 +21,6 @@ public class MoveLeft : MonoBehaviour
         if (transform.position.x < -60) // hoặc điều kiện phù hợp
         {
             OnOutOfScreen?.Invoke();
-            gameObject.SetActive(false); // hoặc gọi Return từ pool
         }
 
         if (m_playerControllerScript == null|| m_playerControllerScript.Gameover)
