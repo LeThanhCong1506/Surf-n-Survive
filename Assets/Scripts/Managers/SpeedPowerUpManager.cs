@@ -9,6 +9,7 @@ public class SpeedPowerUpManager
 {
     private GameManager m_gameManager;
     private GameObject m_speedPrefab;
+    private ObjectPool m_speedPool;
     private ObstacleSpawner m_obstacleSpawner;
 
     public SpeedPowerUpManager(GameManager manager, GameObject prefab, ObstacleSpawner obstacleSpawner)
@@ -16,6 +17,8 @@ public class SpeedPowerUpManager
         m_gameManager = manager;
         m_speedPrefab = prefab;
         m_obstacleSpawner = obstacleSpawner;
+
+        m_speedPool = new ObjectPool(m_speedPrefab, 3);
     }
 
     public void StartSpawning()
@@ -31,7 +34,12 @@ public class SpeedPowerUpManager
             yield return new WaitForSeconds(randomTime);
 
             m_obstacleSpawner.IsSpawningSpeedItem = true;
-            Object.Instantiate(m_speedPrefab, new Vector3(15,Random.Range(-2.7f, 0.7f), 0), m_speedPrefab.transform.rotation);
+
+            Vector3 spawnPos = new Vector3(15, Random.Range(-2.7f, 0.7f), 0);
+            var powerUp = m_speedPool.Get(spawnPos, m_speedPrefab.transform.rotation);
+
+            powerUp.GetComponent<MoveLeft>().OnOutOfScreen += () => m_speedPool.Return(powerUp);
+
             yield return new WaitForSeconds(1);
             m_obstacleSpawner.IsSpawningSpeedItem = false;
         }
